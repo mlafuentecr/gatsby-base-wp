@@ -8,30 +8,9 @@ const MenuItems = () => {
   const queryMenu = useStaticQuery(graphql`
   {
     WP_1 {
-      hDsettings {
+      menuItems {
         nodes {
-          acf_settings {
-            social {
-              link
-              icon
-            }
-            siteLogo {
-              sourceUrl
-              altText
-            }
-            seo {
-              siteTitle
-              metaDescription
-              keywords
-            }
-            secondColor
-            mainColors
-            contactInfo {
-              contactInfo
-              email
-              phonePrincipal
-            }
-          }
+          locations
         }
       }
     }

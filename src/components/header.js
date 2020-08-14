@@ -7,6 +7,11 @@ const Header = props => {
   const querySettings = useStaticQuery(graphql`
     {
       WP_1 {
+        allSettings {
+          generalSettingsTitle
+          generalSettingsDescription
+          generalSettingsUrl
+        }
         hDsettings {
           nodes {
             acf_settings {

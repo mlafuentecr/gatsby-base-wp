@@ -10,11 +10,13 @@ const SEO = ({ description, lang, meta, title }) =>{
   const { site } = useStaticQuery(
     graphql`
       query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
+        allSite {
+          nodes {
+            siteMetadata {
+              title
+              siteUrl
+              description
+            }
           }
         }
       }

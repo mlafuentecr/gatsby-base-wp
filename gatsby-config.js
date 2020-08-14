@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `mariolafuente.com`,
-    description: `Mario lafuente - Front End Web Developer from Costa Rica with over a decade of experience in web development languages and web related software. `,
+    title: `gC - mariolafuente.com`,
+    description: `gC - Mario lafuente - Front End Web Developer from Costa Rica with over a decade of experience in web development languages and web related software. `,
     author: `@mariolafuente`,
     siteUrl: "https://www.mariolafuente.com/",
   },
@@ -39,8 +39,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Albven.com`,
-        short_name: `Albven`,
+        name: `mariolafuente.com`,
+        short_name: `mariolafuente`,
         start_url: `/`,
         lang: `en`,
         background_color: `#f1162b`,
