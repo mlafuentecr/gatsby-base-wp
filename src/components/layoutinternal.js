@@ -1,0 +1,19 @@
+import React, { useEffect, useState } from 'react'
+import Header from './header'
+import Footer from './footer'
+import './styles/global.css'
+
+
+import handleChick from './handleClick'
+
+const LayoutIndex = ({ children }) => {
+  return (
+      <div className={`pgInternal wrapper`}    onClick={handleChick}>
+        <Header logoUrl='/logo.jpg' siteTitle='' />
+        <main>{children}</main>
+        <Footer/>
+      </div>
+  )
+}
+
+export default LayoutIndex
