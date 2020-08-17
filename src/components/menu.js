@@ -1,16 +1,35 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 
 const MenuItems = () => {
-
+  const [showSubmenu] = useState(true)
 
   const queryMenu = useStaticQuery(graphql`
   {
     WP_1 {
-      menuItems {
+      menus {
         nodes {
-          locations
+          slug
+          menuItems {
+            nodes {
+              id
+              label
+              cssClasses
+              path
+              childItems {
+                nodes {
+                  id
+                  url
+                  label
+                  title
+                  target
+                  cssClasses
+                  path
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -18,109 +37,102 @@ const MenuItems = () => {
 `)
 
 
+//let childItem = queryMenu.WP_1.menus.nodes
+const allMenus = queryMenu.WP_1.menus.nodes
+
+console.log(allMenus);
+
+const LinkArrow = props => (
+  <span
+    className="linksSubmenu"
+    role="button"
+    onClick={function(event) {
+      event.target.parentElement.parentElement.classList.toggle('open')
+    }}
+  ></span>
+)
 
 
+
+
+
+  const MenuMain = ()=>{
+    return (
+      allMenus.map((menu, index) => {
+        if (menu.slug === `top-menu`) {
+          return ( <>
+          {
+          menu.menuItems.nodes.map((link, ii) => {
+            //destructuring variables
+            let { label, path, childItems } = link
+
+            //console.log(childItems.nodes.length);
+              return (
+                <li key={ii} className={`parent`}>
+                  <li /*to={path}*/ className={`subLink`}>
+                    {label}
+                    {/*ARROW MENU MOBILE <LinkArrow number={ii} />*/}
+                    {childItems.nodes.length > 0 ? (
+                     <ul className="submenu">
+                    { (childItems.nodes.map(obj2 => 
+                      <li className="subChildren">{obj2.label}</li>
+                     ))}
+                   </ul>
+                    ) : ('')
+                    }
+                    
+                  </li>
+                  {/* SUB MENU */}
+                  {childItems.nodes.length > 0 ? ( <SubMenu number={ii} />  ) : ( '' )}
+                </li>
+              )
+          
+          })}
+        </ >)
+        }
+      }
+      )
+    )
+  }
+
+
+
+
+  //--------SUBMENU
+const SubMenu = props => {
+  let childItem = queryMenu.WP_1.menus.nodes
+  console.log(childItem);
+    return (
+      <ul className={`menu`}>
+        {childItem.map((subIndex, i) => {
+          return (
+            <li key={i}>
+              <Link key={subIndex.id} className="linksMenu">
+                {/* {subIndex.node.label} */}
+              </Link>
+            </li>
+          )
+        })}
+      </ul>
+    )
+
+  return null
+}
+console.log(SubMenu);
 
   return (
-    <ul className="menu">
-      <li className="home">
-        <a href="index.html">Home</a>
-        <ul className="submenu">
-          <li>
-            <a href="index.html">Home 01</a>
-          </li>
-          <li>
-            <a href="index-v2.html">Home 02</a>
-          </li>
-          <li>
-            <a href="index-v3.html">Home 03</a>
-          </li>
-          <li>
-            <a href="index-v4.html">Home 04</a>
-          </li>
-          <li>
-            <a href="index-v5.html">Home 05</a>
-          </li>
-          <li>
-            <a href="index-v6.html">Home 06</a>
-          </li>
-          <li>
-            <a href="index-v7.html">Home 07</a>
-          </li>
+    <div class="nav-wrap">
+
+    <div class="btn-menu">
+      <span></span>
+    </div>
+
+      <nav id="mainnav" class="mainnav">
+        <ul className="menu">
+          <MenuMain />
         </ul>
-      </li>
-      <li>
-        <Link to="page-2">About Us</Link>
-      </li>
-      <li>
-        <a href="services.html">Services</a>
-        <ul className="submenu">
-          <li>
-            <a href="services.html">Services</a>
-          </li>
-          <li>
-            <a href="services-single.html">Services Single</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="case-v1.html">Cases</a>
-        <ul className="submenu">
-          <li>
-            <a href="case-v1.html">Case V1</a>
-          </li>
-          <li>
-            <a href="case-v2.html">Case V2</a>
-          </li>
-          <li>
-            <a href="case-single-v1.html">Case Single V1</a>
-          </li>
-          <li>
-            <a href="case-single-v2.html">Case Single V2</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="blog.html">News</a>
-        <ul className="submenu">
-          <li>
-            <a href="blog.html">Blog V1</a>
-          </li>
-          <li>
-            <a href="blog-v2.html">Blog V2</a>
-          </li>
-          <li>
-            <a href="blog-single.html">Blog single</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="partner.html">Pages</a>
-        <ul className="submenu">
-          <li>
-            <a href="history.html">History</a>
-          </li>
-          <li>
-            <a href="partner.html">Partner</a>
-          </li>
-          <li>
-            <a href="team-v1.html">Team V1</a>
-          </li>
-          <li>
-            <a href="team-v2.html">Team V2</a>
-          </li>
-          <li>
-            <a href="overview.html">Overview</a>
-          </li>
-          <li>
-            <a href="header.html">Header</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="contact.html">Contact Us</a>
-      </li>
-    </ul>
+      </nav>
+    </div>
   )
 }
 

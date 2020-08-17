@@ -64,22 +64,14 @@ const Header = props => {
               </Link>
             </div>
 
-            <div className="nav-wrap">
-              <div className="btn-menu" rel="drawIcon">
-                <span></span>
-              </div>
-
-              <nav id="mainnav" className="mainnav">
                 <MenuItems />
-              </nav>
-            </div>
+            
           </div>
         </div>
       </header>
-
-      <nav id="mainnav-mobi" className="mainnav">
-        <MenuItems />
-      </nav>
+     
+      
+     
     </>
   )
 }

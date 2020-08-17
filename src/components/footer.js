@@ -46,8 +46,8 @@ const Footer = props => {
       </div>
 
            
-      <div id='scrollDiv' class="to-top-right hide">
-          <a id='scrollTop' onClick={()=>topFunction()} class="screen-reader-text">▲</a>
+      <div id='scrollDiv' className="to-top-right hide">
+          <a id='scrollTop' onClick={()=>topFunction()} className="screen-reader-text">▲</a>
       </div>
     </footer>
   )

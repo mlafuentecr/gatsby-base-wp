@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: "https://www.mariolafuente.com/",
   },
   plugins: [
+   `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
