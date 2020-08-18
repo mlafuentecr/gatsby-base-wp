@@ -680,6 +680,13 @@ h2 {
           transform: rotate(180deg);
 }
 
+.parallax {
+  width: 100%;
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
 /*HEADLINE*/
 .awssld {
   max-height: 500px !important;

@@ -173,4 +173,11 @@ h2 {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+
+.parallax {
+  width: 100%;
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-size: cover;
+}
 /*# sourceMappingURL=utils.css.map */

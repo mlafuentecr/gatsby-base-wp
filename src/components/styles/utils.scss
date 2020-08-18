@@ -126,3 +126,9 @@ $curveWidth: 200%;
   }
 }
 
+.parallax {
+  width: 100%;
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-size: cover;
+}

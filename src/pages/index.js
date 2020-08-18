@@ -1,4 +1,4 @@
-import React, { Children } from "react"
+import React from "react"
 import LayoutIndex from "../components/layoutIndex"
 import { FaCodepen } from 'react-icons/fa';
 import { TiDeviceDesktop } from "react-icons/ti";
@@ -85,8 +85,30 @@ const IndexPage = props => {
           </div>
       </div>
    
+
+      <div className={`parallax parallax1`} style={{backgroundImage: "https://avada.theme-fusion.com/freelancer/wp-content/uploads/sites/58/2016/05/banner_images.jpg"}} >
+      <div className="wrap">
+          <div className="container mainText">
+            <div className="post-choose">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad
+                minim veniam, nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate.
+              </p>
+            </div>
+          </div>
+          </div>
+      </div>
+
+
     </LayoutIndex>
   )
 }
+
+
+
+
 
 export default IndexPage
