@@ -38,17 +38,8 @@ const MenuItems = () => {
   //let childItem = queryMenu.WP_1.menus.nodes
   const allMenus = queryMenu.WP_1.menus.nodes
 
-  console.log(allMenus)
-
-  const LinkArrow = props => (
-    <span
-      className="linksSubmenu"
-      role="button"
-      onClick={function (event) {
-        event.target.parentElement.parentElement.classList.toggle("open")
-      }}
-    ></span>
-  )
+  
+  
 
   const MenuMain = () => {
     return allMenus.map((menu, i) => {
@@ -64,11 +55,13 @@ const MenuItems = () => {
                   <li key={id} className={`subLink`}>
                     <a href={path}>{label}</a>
                     <ul className="submenu">
-                      {childItems.nodes.map((obj2, iii) => (
+                      {
+                      childItems.nodes.map((obj2, iii) => (
                         <li key={iii} className="subChildren">
                           <a href={obj2.path}>{obj2.label}</a>
                         </li>
-                      ))}
+                      ))
+                      }
                     </ul>
                   </li>
                 </div>
@@ -81,15 +74,7 @@ const MenuItems = () => {
   }
 
   return (
-    <div className="nav-wrap">
-      <div className="btn-menu">
-        <span></span>
-      </div>
-
-      <nav id="mainnav" className="mainnav">
-        <MenuMain />
-      </nav>
-    </div>
+    <MenuMain />
   )
 }
 

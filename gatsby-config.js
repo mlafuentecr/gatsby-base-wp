@@ -23,7 +23,7 @@ module.exports = {
       options: {
         fieldName: `WP_1`,
         typeName: `WPheadless`,
-        url: "http://www.gatsby.mariolafuente.com/graphql",
+        url: "https://www.gatsby.mariolafuente.com/graphql",
         refetchInterval: 60,
       },
     },

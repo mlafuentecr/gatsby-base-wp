@@ -96,10 +96,6 @@ select {
 
 /* Header
 -------------------------------------------------------------- */
-.btn-menu {
-  display: none;
-}
-
 .header-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,14 +103,28 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px;
+  margin: 0px -15px;
+  height: 120px;
 }
 
 .header-wrap .logo {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  line-height: 100px;
+  margin: 0px 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .header-wrap .logo img {
@@ -129,6 +139,7 @@ select {
   width: 85vw;
   -webkit-transform: translateX(20vw);
           transform: translateX(20vw);
+  height: 100%;
 }
 
 .openDraw .btn-menu span {
@@ -153,7 +164,7 @@ select {
   position: absolute;
   background-color: #2a0d58;
   z-index: 1000;
-  top: 100px;
+  top: 120px;
 }
 
 #mainnav-mobi ul {
@@ -207,6 +218,8 @@ select {
       -ms-flex: 1;
           flex: 1;
   height: 100px;
+  max-width: 10%;
+  position: relative;
 }
 
 #mainnav ul {
@@ -292,6 +305,7 @@ select {
 
 .header .logo {
   line-height: 100px;
+  margin: 0px 0px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -316,17 +330,14 @@ select {
 /* Button menu mobile */
 .btn-menu {
   position: absolute;
-  right: 20px;
-  top: 0;
+  right: calc(-50% + 22px);
+  top: calc(50% - 22px);
   font: 20px/50px 'FontAwesome';
   text-align: center;
   cursor: pointer;
-  width: 70px;
+  width: 100%;
   height: 44px;
   background: transparent;
-  margin: 22px 0;
-  float: left;
-  margin-right: 15px;
   -webkit-transition: all ease .238s;
   transition: all ease .238s;
 }
@@ -475,6 +486,7 @@ select {
         -ms-flex: initial;
             flex: initial;
     height: initial;
+    max-width: initial;
   }
   .btn-menu {
     display: none;
@@ -483,6 +495,11 @@ select {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .logo {
+    -webkit-box-flex: initial !important;
+        -ms-flex: initial !important;
+            flex: initial !important;
   }
 }
 
@@ -682,9 +699,23 @@ h2 {
 
 .parallax {
   width: 100%;
+  height: 500px;
   background-attachment: fixed;
-  background-position: 50% 0;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+}
+
+:root {
+  --secondColor: black;
+  --gray: #767676;
+  --menuFontColor:  black;
+  --fontSizeBigX: 1.2rem;
+  --fontSizeBig: 1rem;
+  --menuFontSize:  0.8rem;
+  --fontSizeRegular: 0.8rem;
+  --fontSizeSmallX: 0.6rem;
+  --fontSizeSmallX: 0.4rem;
 }
 
 /*HEADLINE*/
@@ -695,6 +726,71 @@ h2 {
 .awssld__content > div {
   z-index: 999;
   color: white;
+}
+
+.bannertext p {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  line-height: normal;
+}
+
+.awssld__content {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.awssld__content div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.awssld__content .bannerHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.awssld__content img {
+  height: 80%;
+}
+
+.awssld__content .bannertext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50%;
+}
+
+/* --------- Desktop  si es amyor que ipad 780px  ------ */
+@media only screen and (min-width: 768px) {
+  .awssld__content .bannerHolder {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+/* ----------- laptops si es mas grande que ipad pero heigh ----------- */
+/* ----------- iPad in landscape ----------- */
+/* ----------- smaller than 360px ----------- */
+@media only screen and (min-device-width: 360px) {
+  /*<!--=============== IOS DEVICES ===============-->*/
+  /*<!--=============== NOT IOS DEVICES ===============-->*/
 }
 
 /*<!--=============== GENERAL STYLES  ===============-->*/
@@ -731,7 +827,7 @@ body {
 }
 
 .container {
-  width: 970px;
+  width: 100%;
   margin: auto;
   padding: 0px 15px;
 }
@@ -741,17 +837,77 @@ body {
   margin-left: -15px;
 }
 
-.header .logo {
-  line-height: 100px;
-  max-width: 200px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
 .footer {
   background-color: #222;
   padding: 85px 0 67px;
   color: #fff;
+}
+
+.footer .usaPhone {
+  font-size: larger;
+  background: #353535;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.footer .logo img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+.footer #logo {
+  max-width: 250px;
+  font-size: 14px;
+  color: gray;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .social-wrap {
+  width: 40%;
+}
+
+.footer .social-wrap ul {
+  list-style-type: none;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0px;
+  margin-top: 50px;
+}
+
+.footer .social-wrap li {
+  font-size: 22px;
+}
+
+.footer .social-wrap a {
+  color: white;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+.footer .social-wrap a:hover {
+  color: #a579eb;
 }
 
 main {
@@ -781,7 +937,19 @@ main {
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
 @media only screen and (min-width: 768px) {
   .container {
-    width: 1024px;
+    width: 768px;
+  }
+  .footer .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer .social-wrap {
+    width: 40%;
+  }
+  .footer .social-wrap ul {
+    margin-top: 0px;
   }
 }
 

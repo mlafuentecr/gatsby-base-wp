@@ -34,7 +34,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 .container {
-    width: $standard;
+    width: 100%;
     margin: auto;
     padding: 0px 15px;
 }
@@ -43,22 +43,61 @@ body {
     margin-left: -15px;
   
 }
-.header .logo {
-    line-height: 100px;
-    max-width: 200px;
-    -webkit-transition: all 0.3s ease-in-out;
-	   -moz-transition: all 0.3s ease-in-out;
-	    -ms-transition: all 0.3s ease-in-out;
-	     -o-transition: all 0.3s ease-in-out;
-	        transition: all 0.3s ease-in-out;
-}
+
 
 
 .footer {
     background-color: #222;
     padding: 85px 0 67px;
     color: #fff;
+    .usaPhone {
+        font-size: larger;
+        background: #353535;
+        justify-content: center;
+        text-align: center;
+    }
+    .logo img {
+        filter: brightness(0) invert(1);
+    }
+   #logo {
+        max-width: 250px;
+        font-size: 14px;
+        color: gray;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    .social-wrap{
+        width: 40%;
+        ul{
+            list-style-type: none;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0px;
+            margin-top: 50px;
+        }
+        li{
+            font-size: 22px;
+        }
+        a{
+            color: white;
+            text-decoration-line: none;
+           
+            &:hover{
+                color:$menuHover;
+            }
+        }
+    }
 }
+
+
 main{
     display: flex;
     flex: 1;
@@ -93,8 +132,28 @@ main{
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
 @media only screen and (min-width: $ipad) {
     .container {
-        width: $laptop;
-    } 
+        width: $ipad;
+    }
+
+
+
+    
+
+.footer {
+    .container {
+        flex-direction: row;
+    }
+
+    .social-wrap{
+        width: 40%;
+        ul{
+            margin-top: 0px;
+        }
+    }
+
+
+}
+
 }
 
 

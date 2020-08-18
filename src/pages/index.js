@@ -86,7 +86,7 @@ const IndexPage = props => {
       </div>
    
 
-      <div className={`parallax parallax1`} style={{backgroundImage: "https://avada.theme-fusion.com/freelancer/wp-content/uploads/sites/58/2016/05/banner_images.jpg"}} >
+      <div className={`parallax parallax1`} style={{ backgroundImage:`url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/08/sertvices.jpg)`}} >
       <div className="wrap">
           <div className="container mainText">
             <div className="post-choose">

@@ -1,3 +1,6 @@
+@import './variables';
+
+
 /*HEADLINE*/
 
 .awssld{
@@ -7,3 +10,89 @@
   z-index: 999;
   color: white;
 }
+.bannertext p {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  line-height: normal;
+
+}
+//image bg
+.awssld__content {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  div {
+    display: flex;
+    height: 100%;
+  
+  }
+  .bannerHolder{
+    display: flex;
+    flex-direction: column;
+  }
+ img {
+    height: 80%;
+}
+.bannertext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  flex-wrap: wrap;
+}
+}
+
+
+
+
+/* --------- Desktop  si es amyor que ipad 780px  ------ */
+@media only screen and (min-width: $ipad) {
+  .awssld__content {
+    .bannerHolder{
+      flex-direction: row;
+    }
+  }
+}
+
+
+/* ----------- laptops si es mas grande que ipad pero heigh ----------- */
+
+@media only screen and (min-width: $ipad) and (max-height: 970px) {
+
+}
+
+
+
+
+
+
+/* ----------- iPad in landscape ----------- */
+
+// @media only screen and (max-width: 778px) {
+@media only screen and (max-device-width: $ipad) and (orientation: landscape) {
+
+}
+
+
+/* ----------- smaller than 360px ----------- */
+
+@media only screen and (min-device-width: 360px) {
+
+  /*<!--=============== IOS DEVICES ===============-->*/
+  @supports (-webkit-touch-callout: none) {
+      /* CSS specific to iOS devices */
+  
+  }
+  /*<!--=============== NOT IOS DEVICES ===============-->*/
+  @supports not (-webkit-touch-callout: none) {
+      /* CSS for other than iOS devices */
+    
+  }
+}
+
+//When keyboard is present hide slideshow
+@media screen and (max-width: $ipad) and (max-height: 450px) {
+
+}
+
