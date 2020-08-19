@@ -15,7 +15,7 @@
   margin: 0px;
   padding: 0px;
   line-height: normal;
-
+  flex-direction: column;
 }
 //image bg
 .awssld__content {
@@ -38,13 +38,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
-  flex-wrap: wrap;
+  flex-direction: column;
+   height: 100%;
 }
+
+
 }
 
+.awssld__timer--run {
+  height: 5px !important;
+}
 
-
+@media only screen and (max-width: $ipad) {
+  .bannertext {
+    h1, h2, h3{
+      font-size: 6vw;
+    }
+  }
+}
 
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
 @media only screen and (min-width: $ipad) {
@@ -53,6 +64,15 @@
       flex-direction: row;
     }
   }
+
+  .awssld__content {
+      .bannertext {
+        height: 50%;
+        background-color: transparent;
+    }
+  }
+
+  
 }
 
 

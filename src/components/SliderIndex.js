@@ -82,8 +82,6 @@ const SliderIndex = props => {
       if (videoImgSwitch) {
         return videoUrl
       } else {
-        console.log(backgroundImg.sourceUrl);
-        return ''
         if(backgroundImg.sourceUrl != null){
           return backgroundImg.sourceUrl
         }else{
@@ -94,18 +92,30 @@ const SliderIndex = props => {
       return ""
     }
     const headlineContent = () => {
+
       if (images && !textSwitch) {
-        return <div style={{ justifyContent: hPosition, alignItems:vPosition}} ><img src={`${images.sourceUrl}`} alt={`${images.altText}`} /></div>
+        return <div style={{ justifyContent: hPosition, alignItems:vPosition}} >
+          <img src={`${images.sourceUrl}`} alt={`${images.altText}`} />
+          </div>
       }
+
       if (images && textSwitch) {
-        return <div className='bannerHolder' style={{ justifyContent: hPosition, alignItems:vPosition}} ><img src={`${images.sourceUrl}`} alt={`${images.altText}`} />
-        <div className="bannertext" dangerouslySetInnerHTML={{ __html: `${text}` }}></div>
+        return <div className='bannerHolder' style={{ justifyContent: hPosition, alignItems:vPosition}} >
+          <img src={`${images.sourceUrl}`} alt={`${images.altText}`} />
+          <div className="bannertext" dangerouslySetInnerHTML={{ __html: `${text}` }}></div>
         </div>
       }
+      if (textSwitch) {
+        return <div className='bannerHolder' style={{ justifyContent: hPosition, alignItems:vPosition}} >
+          <div className="bannertext" dangerouslySetInnerHTML={{ __html: `${text}` }}></div>
+        </div>
+      }
+
       return ""
+
     }
 
-    console.log(bgUrl())
+   
 
     return (
       <div key={index} style={{ backgroundColor:bgcolor, backgroundImage: `url(${bgUrl()})` }}>
