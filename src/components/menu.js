@@ -51,7 +51,7 @@ const MenuItems = () => {
               let { id, label, path, childItems } = link
 
               return (
-                <div key={ii} className={`parent`}>
+                
                   <li key={id} className={`subLink`}>
                     <a href={path}>{label}</a>
                     <ul className="submenu">
@@ -64,7 +64,7 @@ const MenuItems = () => {
                       }
                     </ul>
                   </li>
-                </div>
+                
               )
             })}
           </ul>

@@ -7,7 +7,6 @@ import MenuItems from "./menu"
 const Header = props => {
   return (
     <>
-      <SEO title={props.siteTitle} />
       <header id="header" className="header style-color clearfix">
         <div className="container">
           <div className="header-wrap clearfix">

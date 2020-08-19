@@ -2,135 +2,256 @@
 
 /*<!--=============== GENERAL STYLES  ===============-->*/
 
-
-h1{
-  font-size: 48px;
-  margin-bottom: 27px;
-  font-weight: 600;
-  transform: none;
-  text-transform: uppercase;
+h1 {
+    font-size: 48px;
+    margin-bottom: 27px;
+    font-weight: 600;
+    transform: none;
+    text-transform: uppercase;
 }
-h2{
-  color: $principalColor;
+
+h2 {
+    color: $principalColor;
 }
 
 .title-section {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
-
-.full{
-  width: 100%;
+.full {
+    width: 100%;
 }
+
 #scrollDiv {
-  height: 25px;
-  position: fixed;
-  bottom: 0px;
-  z-index: 999;
-  width: 100%;
-  
-  justify-content: right;
+    height: 25px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 999;
+    width: 100%;
+    justify-content: right;
 }
-#scrollTop {
-  background: #333;
-  width: 40px;
-  border-radius: 4px 4px 0 0;
-  position: absolute;
-  right: 1%;
-  display: flex;
-  justify-content: center;
-  color: white;
-  pointer-events: auto;
-  opacity: .9;
-  &:hover{
-      background: $menuHover; 
-  }
-}
-.hide{display: none;}
-.show{display: flex;}
 
-.hr{
-  overflow: hidden;
+#scrollTop {
+    background: #333;
+    width: 40px;
+    border-radius: 4px 4px 0 0;
+    position: absolute;
+    right: 1%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    pointer-events: auto;
+    opacity: .9;
+    &:hover {
+        background: $menuHover;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.hr {
+    overflow: hidden;
 }
 
 .circleIcon {
-  width: 100px;
-  height: 100px;
-  background: #6a6a6a;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  border-radius: 50%;
-  svg{
-      width: 60%;
-      height: 60%;
-      fill: white;
-  }
+    width: 100px;
+    height: 100px;
+    background: #6a6a6a;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    svg {
+        width: 60%;
+        height: 60%;
+        fill: white;
+    }
 }
-
-
 
 .hr-curve {
-  height: 200px;
+    height: 200px;
 }
+
 $curveWidth: 200%;
-.color1{
+.color1 {
     padding: 0px;
     margin: 0px;
-    &>div{
+    &>div {
         color: black;
         background-color: white;
         display: flex;
         align-items: flex-end;
         justify-content: center;
     }
-    .svgCurve{
+    .svgCurve {
         fill: #44405a;
         width: $curveWidth;
         height: 180px;
     }
-    
-    &.invert{
+    &.invert {
         background-color: #44405a!important;
-        .svgCurve{
+        .svgCurve {
             fill: white;
         }
     }
 }
 
-.color2{
+.color2 {
     padding: 0px;
     margin: 0px;
-    div{
-      color: white;
-      background-color: $menuBackground;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      
-  }
-  
-      .svgCurve {
+    div {
+        color: white;
+        background-color: $menuBackground;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .svgCurve {
         fill: white;
         height: 100%;
         width: $curveWidth;
         background: $menuBackground;
-  }
-
-  &.invert{
-    background-color: #44405a!important;
-    .svgCurve{
-        fill: white;
-        transform: rotate(180deg);
     }
-  }
+    &.invert {
+        background-color: #44405a!important;
+        .svgCurve {
+            fill: white;
+            transform: rotate(180deg);
+        }
+    }
 }
 
 .parallax {
-  width: 100%;
-  height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blocks-gallery-item {
+    padding: 20px;
+}
+
+.blocks-gallery-grid {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.blocks-gallery-item {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    figcaption {
+      position: relative;
+      //opacity: 0;
+      overflow: hidden;
+      strong{
+        top: -10px;
+        position: relative;
+        transition: top .5s ease;
+      }
+  }
+  &:hover{
+    figcaption {
+      opacity: 1;
+      overflow: hidden;
+      strong{
+        top: 0;
+      }
+  }
+  }
+}
+
+.columns-1 {
+    li {
+        min-width: 100%;
+    }
+}
+
+.columns-2 {
+    li {
+        min-width: 50%;
+    }
+}
+
+.columns-3 {
+    li {
+        min-width: 33.3%;
+    }
+}
+
+.columns-4 {
+    .blocks-gallery-item {
+        img {
+            height: auto;
+        }
+    }
+    li {
+        min-width: 25%;
+    }
+}
+
+.columns-5 {
+    .blocks-gallery-item {
+        img {
+            height: auto;
+        }
+    }
+    li {
+        min-width: 20%;
+    }
+}
+
+.columns-6 {
+    .blocks-gallery-item {
+        img {
+            height: auto;
+        }
+    }
+    li {
+        min-width: 15%;
+    }
+}
+
+
+
+
+
+
+
+/* Flashing */
+.blocks-gallery-grid figure:hover img {
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
 }

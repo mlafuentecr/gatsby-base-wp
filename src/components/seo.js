@@ -6,7 +6,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const SEO = ({ description, lang, meta, title, author }) =>{
 
-  
 
   const site = useStaticQuery(graphql`
   query {
@@ -21,8 +20,8 @@ const SEO = ({ description, lang, meta, title, author }) =>{
     }
   }
   `)
-  
 
+  
   const {title: titleQuery, siteUrl: siteUrlQuery, description: descriptionQuery} =site.allSite.nodes[0].siteMetadata;
   const metaDescription = description || descriptionQuery
   const metaTitle =  title || titleQuery;
@@ -35,7 +34,7 @@ const SEO = ({ description, lang, meta, title, author }) =>{
     <Helmet
       htmlAttributes={{ lang : 'en' }}
       title={metaTitle}
-      titleTemplate={`%s | ${title}`}
+      titleTemplate={`%s  | ${titleQuery}`}
       defer={false}
       meta={[
         {

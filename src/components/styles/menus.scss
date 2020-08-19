@@ -126,7 +126,7 @@
           color: #222;
           text-decoration: none; 
           font-size: 14px;
-          margin: 0 15px;
+          margin: 0px;
           font-weight: 600;
           -webkit-transition: all 0.3s ease-in-out;
            -moz-transition: all 0.3s ease-in-out;
@@ -157,7 +157,7 @@
   display: block;
   color: black;
   text-decoration: none;
-  padding: 0 0 0 20px!important;
+  padding: 0pxñ;
   line-height: 45px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -354,7 +354,7 @@
             display: block;
             color: #fff;
             text-decoration: none;
-            padding: 0 0 0 20px;
+            padding: 0px;
             line-height: 45px;
             -webkit-transition: all 0.3s ease-in-out;
             -moz-transition: all 0.3s ease-in-out;
@@ -407,7 +407,16 @@
     flex: initial;
     height: initial;
     max-width: initial;
+    flex: 1;
   }
+
+  #mainnav ul{
+    flex: 1;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+ 
 
   .btn-menu{
     display: none;

@@ -95,8 +95,19 @@ body {
             }
         }
     }
+
+  
 }
 
+.social-wrap svg:hover {
+    color: $menuHover;
+}
+.subLink a:hover {
+    color: $menuHover;
+}
+.subChildren a:hover {
+    color: black!important;
+}
 
 main{
     display: flex;
@@ -111,7 +122,13 @@ main{
     padding: 90px 15px;
 }
 
+/*<!--=============== Internal  ===============-->*/
+.pgInternal {
 
+    #header {
+        box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.07);
+    }
+}
 
 
 /*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
@@ -135,9 +152,6 @@ main{
         width: $ipad;
     }
 
-
-
-    
 
 .footer {
     .container {

@@ -182,4 +182,124 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.blocks-gallery-item {
+  padding: 20px;
+}
+
+.blocks-gallery-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.blocks-gallery-item {
+  padding: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blocks-gallery-item figcaption {
+  position: relative;
+  overflow: hidden;
+}
+
+.blocks-gallery-item figcaption strong {
+  top: -10px;
+  position: relative;
+  -webkit-transition: top .5s ease;
+  transition: top .5s ease;
+}
+
+.blocks-gallery-item:hover figcaption {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.blocks-gallery-item:hover figcaption strong {
+  top: 0;
+}
+
+.columns-1 li {
+  min-width: 100%;
+}
+
+.columns-2 li {
+  min-width: 50%;
+}
+
+.columns-3 li {
+  min-width: 33.3%;
+}
+
+.columns-4 .blocks-gallery-item img {
+  height: auto;
+}
+
+.columns-4 li {
+  min-width: 25%;
+}
+
+.columns-5 .blocks-gallery-item img {
+  height: auto;
+}
+
+.columns-5 li {
+  min-width: 20%;
+}
+
+.columns-6 .blocks-gallery-item img {
+  height: auto;
+}
+
+.columns-6 li {
+  min-width: 15%;
+}
+
+/* Flashing */
+.blocks-gallery-grid figure:hover img {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=utils.css.map */

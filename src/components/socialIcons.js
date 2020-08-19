@@ -1,5 +1,5 @@
 import React from "react"
-import { FaSkype, GrYoutube, FaLinkedinIn, FaInstagramSquare, FaTwitterSquare, FaGithub, FaFacebookSquare, FaPhone} from "react-icons/fa"
+import { FaSkype, GrYoutube, FaLinkedinIn, FaInstagramSquare, FaTwitterSquare, FaGithub, FaFacebookSquare, FaPhone, FaWhatsapp} from "react-icons/fa"
 const SocialIcons = (props) => {
 
  
@@ -26,6 +26,9 @@ const SocialIcons = (props) => {
       case "FaSkype":
         return <FaSkype onClick={()=>{window.location = `skype:${namelink}?chat`}} />
         break
+        case "FaWhatsapp":
+          return <FaWhatsapp onClick={()=>{window.location = `https://api.whatsapp.com/send?phone=${namelink}&text=Hola%20Mario%20estoy%20interesado%20en%20`}} />
+          break
       default:
         return <FaPhone onClick={()=>{window.location = `tel:+${namelink}`}}/>
     }

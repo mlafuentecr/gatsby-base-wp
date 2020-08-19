@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `gC - mariolafuente.com`,
-    description: `gC - Mario lafuente - Front End Web Developer from Costa Rica with over a decade of experience in web development languages and web related software. `,
+    title: `Mario lafuente | Front End Web Developer from Costa Rica`,
+    description: `Mario lafuente - Front End Web Developer from Costa Rica with over a decade of experience in web development wordpress and react , gatsby, and  web related software. `,
     author: `@mariolafuente`,
     siteUrl: "https://www.mariolafuente.com/",
   },
