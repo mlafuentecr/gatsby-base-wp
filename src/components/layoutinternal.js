@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import Header from './header'
 import Footer from './footer'
 import './styles/global.css'
 import SEO from '../components/seo'
-
+import Modal, {closeStyle} from 'simple-react-modal'
 
 import handleChick from './handleClick'
 
 const LayoutIndex = ({ children }) => {
+const [showModal, setShowModal] = useState(false); 
+const [modalContent, setModalContent] = useState(''); 
 
-  
+
 const querySettings = useStaticQuery(graphql`
 {
   WP_1 {
@@ -68,16 +70,39 @@ const {
 } = siteSetting
 
 
+    // //OPEN IMAGE *********************************
+    // if(e.target.dataset.fullUrl){
+    //   //window.open(e.target.dataset.fullUrl); 
+    //   document.getElementById("modalContent").innerHTML = `<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"> `
+      
+    // }
+
+ 
+
+
+
+function handleChick(e) {
+  //OPEN IMAGE *********************************
+    if(e.target.dataset.fullUrl){
+      setShowModal(true)
+      setModalContent(`<image width="800px" src="${e.target.dataset.fullUrl}"/>`)
+    }
+}
+
   return (
     <>
       <div className={`pgInternal wrapper`}    onClick={handleChick}>
-          <Header
-        logoUrl={siteLogo.sourceUrl}
-        logoAlt={siteLogo.altText}
-        // siteTitle={seo.siteTitle}
-        // description={seo.metaDescription}
-      />
-        <main>{children}</main>
+        <Header
+          logoUrl={siteLogo.sourceUrl}
+          logoAlt={siteLogo.altText}
+        />
+        <main >{children}</main>
+
+        <Modal show={showModal}  containerStyle={{width:"600px"}} >
+          <div className="close" onClick={()=>setShowModal(false)}>X</div>
+          <div dangerouslySetInnerHTML={{__html: modalContent}}/>
+        </Modal>
+
         <Footer
         logoUrl={siteLogo.sourceUrl}
         logoAlt={siteLogo.altText}

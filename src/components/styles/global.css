@@ -721,10 +721,7 @@ h2 {
   background-size: cover;
 }
 
-.blocks-gallery-item {
-  padding: 20px;
-}
-
+/*<!--=============== Gallery  ===============-->*/
 .blocks-gallery-grid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -757,6 +754,14 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 200px;
+  overflow: hidden;
+}
+
+.blocks-gallery-item img {
+  width: 100%;
+  display: block;
+  height: 100%;
 }
 
 .blocks-gallery-item figcaption {
@@ -765,10 +770,10 @@ h2 {
 }
 
 .blocks-gallery-item figcaption strong {
-  top: -10px;
+  top: -30px;
   position: relative;
-  -webkit-transition: top .5s ease;
-  transition: top .5s ease;
+  -webkit-transition: top .9s ease;
+  transition: top .9s ease;
 }
 
 .blocks-gallery-item:hover figcaption {
@@ -817,7 +822,7 @@ h2 {
 }
 
 /* Flashing */
-.blocks-gallery-grid figure:hover img {
+figure:hover img {
   opacity: 1;
   -webkit-animation: flash 1.5s;
   animation: flash 1.5s;
