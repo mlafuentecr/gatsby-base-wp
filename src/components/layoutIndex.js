@@ -47,8 +47,10 @@ const LayoutIndex = ({ children }) => {
           }
         }
       }
+    
     }
   }
+  
   `)
 
   //Site ACF
@@ -64,7 +66,8 @@ const LayoutIndex = ({ children }) => {
     contactInfo,
   } = siteSetting
 
- 
+
+
   return (
     <div className={`pgindex wrapper`} onClick={handleChick}>
       <Header

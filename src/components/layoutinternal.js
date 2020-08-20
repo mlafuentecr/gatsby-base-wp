@@ -81,17 +81,22 @@ const {
 
 
 
-function handleChick(e) {
+function handleChick1(e) {
   //OPEN IMAGE *********************************
     if(e.target.dataset.fullUrl){
       setShowModal(true)
       setModalContent(`<image width="800px" src="${e.target.dataset.fullUrl}"/>`)
+    }else{
+   //Check real Click
+   handleChick(e)
     }
+    
+ 
 }
 
   return (
     <>
-      <div className={`pgInternal wrapper`}    onClick={handleChick}>
+      <div className={`pgInternal wrapper`}    onClick={handleChick1}>
         <Header
           logoUrl={siteLogo.sourceUrl}
           logoAlt={siteLogo.altText}

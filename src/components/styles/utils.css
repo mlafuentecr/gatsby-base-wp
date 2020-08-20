@@ -24,6 +24,34 @@ h2 {
   color: #E70F0F;
 }
 
+.pgindex h1 {
+  font-size: 40px;
+  line-height: 45px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.pgindex h2 {
+  font-size: 40px;
+  line-height: 45px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.pgindex h3 {
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.pgindex .mainText {
+  font-size: 16px;
+  color: #504e4e;
+  line-height: 34px;
+  letter-spacing: 0.5px;
+}
+
 .title-section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -77,6 +105,16 @@ h2 {
 
 .hr {
   overflow: hidden;
+}
+
+.full {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  -webkit-box-pack: stretch !important;
+      -ms-flex-pack: stretch !important;
+          justify-content: stretch !important;
+  display: block !important;
 }
 
 .circleIcon {
@@ -155,6 +193,8 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .color2 .svgCurve {
@@ -181,6 +221,18 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.div-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*<!--=============== Gallery  ===============-->*/
@@ -283,7 +335,7 @@ h2 {
 }
 
 /* Flashing */
-figure:hover img {
+.blocks-gallery-item figure:hover img {
   opacity: 1;
   -webkit-animation: flash 1.5s;
   animation: flash 1.5s;
@@ -305,5 +357,43 @@ figure:hover img {
   100% {
     opacity: 1;
   }
+}
+
+/*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
+/*<!--=============== IOS DEVICES ===============-->*/
+/* --------- Desktop  si es amyor que ipad 780px  ------ */
+@media only screen and (min-width: 768px) {
+  .pgindex h1 {
+    font-size: 60px;
+    line-height: 75px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+  }
+  .pgindex h2 {
+    font-size: 60px;
+    line-height: 75px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+  }
+  .pgindex h3 {
+    font-size: 50px;
+    line-height: 75px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+  }
+  .pgindex .mainText {
+    font-size: 22px;
+    color: #504e4e;
+    line-height: 34px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* ----------- laptops si es mas grande que ipad pero heigh ----------- */
+/* ----------- iPad in landscape ----------- */
+/* ----------- smaller than 360px ----------- */
+@media only screen and (min-device-width: 360px) {
+  /*<!--=============== IOS DEVICES ===============-->*/
+  /*<!--=============== NOT IOS DEVICES ===============-->*/
 }
 /*# sourceMappingURL=utils.css.map */

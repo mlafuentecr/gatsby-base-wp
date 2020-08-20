@@ -1,9 +1,28 @@
 import React from "react"
 import LayoutIndex from "../components/layoutIndex"
+import { useStaticQuery, graphql } from "gatsby"
 import { FaCodepen } from 'react-icons/fa';
 import { TiDeviceDesktop } from "react-icons/ti";
 
 const IndexPage = props => {
+
+  const querySettings = useStaticQuery(graphql`
+  {
+    WP_1 {
+      page(id: "cG9zdDoxMDI2") {
+        acf_index {
+          seccions {
+            seccion
+          }
+        }
+      }
+    }
+  }
+  
+  `)
+
+  const indexSeccions = querySettings.WP_1.page.acf_index.seccions
+  console.log(indexSeccions[0].seccion);
 
   const Curve =(props)=>{
     return <div className={props.classname} >
@@ -14,23 +33,12 @@ const IndexPage = props => {
 
   return (
     <LayoutIndex>
-      <div className="section color1">
+      <div className="div-center section color1">
         <div className="wrap">
           <div className="container mainText">
-            <div className="title-section">
-              <h1 className="title full">Why Choose Us</h1>
-              <h2>Why Choose Us2</h2>
-              <h3>Why Choose Us</h3>
-            </div>
-            <div className="post-choose">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad
-                minim veniam, nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate.
-              </p>
-            </div>
+
+          <div dangerouslySetInnerHTML={{__html: indexSeccions[0].seccion}} />
+         
           </div>
           </div>
       </div>
@@ -38,66 +46,29 @@ const IndexPage = props => {
       <Curve  classname="color2 hr-curve" />
 
 
-        <div className="section color2">
+        <div className="div-center section color2 full">
         <div className="wrap">
           <div className="container mainText">
-            <div className="title-section">
-              <h1 className="title full">Why Choose Us</h1>
-              <FaCodepen  color="primary" />xxxx
-             
-              <div className="circleIcon"> <TiDeviceDesktop   /></div>
-              <h2>Why Choose Us2</h2>
-              <h3>Why Choose Us</h3>
-            </div>
-            <div className="post-choose">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad
-                minim veniam, nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate.
-              </p>
-            </div>
+            <div dangerouslySetInnerHTML={{__html: indexSeccions[0].seccion}} />
           </div>
           </div>
       </div>
       <Curve  classname="color2 invert  hr-curve" />
         {/* <Curve  classname="color2  hr-curve" /> */}
        
-      <div className="section fullBox">
+      <div className="div-center section fullBox">
         <div className="wrap">
           <div className="container mainText">
-            <div className="title-section">
-              <h1 className="title">Why Choose Us</h1>
-              <h2>Why Choose Us2</h2>
-              <h3>Why Choose Us</h3>
-            </div>
-            <div className="post-choose">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad
-                minim veniam, nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate.
-              </p>
-            </div>
+          <div dangerouslySetInnerHTML={{__html: indexSeccions[0].seccion}} />
           </div>
           </div>
       </div>
    
 
-      <div className={`parallax parallax1`} style={{ backgroundImage:`url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/08/sertvices.jpg)`}} >
+      <div className={`div-center parallax parallax1`} style={{ backgroundImage:`url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/08/sertvices.jpg)`}} >
       <div className="wrap">
           <div className="container mainText">
-            <div className="post-choose">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad
-                minim veniam, nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate.
-              </p>
-            </div>
+          <div dangerouslySetInnerHTML={{__html: indexSeccions[0].seccion}} />
           </div>
           </div>
       </div>

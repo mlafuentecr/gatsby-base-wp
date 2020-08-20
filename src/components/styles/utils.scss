@@ -14,6 +14,33 @@ h2 {
     color: $principalColor;
 }
 
+.pgindex {
+    h1 {
+        font-size: 40px;
+        line-height: 45px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 40px;
+        line-height: 45px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 30px;
+        line-height: 45px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+    }
+    .mainText{
+        font-size: 16px;
+        color: #504e4e;
+        line-height: 34px;
+        letter-spacing: 0.5px;
+    }
+}
+
 .title-section {
     flex-wrap: wrap;
 }
@@ -57,6 +84,14 @@ h2 {
 
 .hr {
     overflow: hidden;
+}
+
+.full {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    justify-content: stretch!important;
+    display: block!important;
 }
 
 .circleIcon {
@@ -111,6 +146,7 @@ $curveWidth: 200%;
         display: flex;
         align-items: flex-end;
         justify-content: center;
+        flex-wrap: wrap;
     }
     .svgCurve {
         fill: white;
@@ -136,14 +172,15 @@ $curveWidth: 200%;
     background-size: cover;
 }
 
-
-
-
-
-
+.div-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /*<!--=============== Gallery  ===============-->*/
+
 .blocks-gallery-grid {
     display: flex;
     flex: 1;
@@ -160,34 +197,30 @@ $curveWidth: 200%;
     align-items: center;
     height: 200px;
     overflow: hidden;
-img{
-
-display: block;
-height: 100%;
-}
+    img {
+        display: block;
+        height: 100%;
+    }
     figcaption {
-      position: relative;
-      //opacity: 0;
-      overflow: hidden;
-      strong{
-        top: -30px;
         position: relative;
-        transition: top .9s ease;
-      }
-  }
-  &:hover{
-    figcaption {
-      opacity: 1;
-      overflow: hidden;
-      strong{
-        top: 0;
-      }
-  }
-  }
+        //opacity: 0;
+        overflow: hidden;
+        strong {
+            top: -30px;
+            position: relative;
+            transition: top .9s ease;
+        }
+    }
+    &:hover {
+        figcaption {
+            opacity: 1;
+            overflow: hidden;
+            strong {
+                top: 0;
+            }
+        }
+    }
 }
-
-
-
 
 .columns-1 {
     li {
@@ -241,30 +274,120 @@ height: 100%;
 }
 
 
-
-
-
-
-
 /* Flashing */
-figure:hover img {
-	opacity: 1;
-	-webkit-animation: flash 1.5s;
-	animation: flash 1.5s;
+
+.blocks-gallery-item figure:hover img {
+    opacity: 1;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
 }
+
 @-webkit-keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 @keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
+
+/*<!--=============== IOS DEVICES ===============-->*/
+
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */
+
+}
+
+@supports not (-webkit-touch-callout: none) {
+    /* CSS for other than iOS devices */
+
+}
+
+
+/* --------- Desktop  si es amyor que ipad 780px  ------ */
+@media only screen and (min-width: $ipad) {
+
+
+    .pgindex {
+        h1 {
+            font-size: 60px;
+            line-height: 75px;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 60px;
+            line-height: 75px;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 50px;
+            line-height: 75px;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+        }
+        .mainText{
+            font-size: 22px;
+            color: #504e4e;
+            line-height: 34px;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    
+}
+
+
+/* ----------- laptops si es mas grande que ipad pero heigh ----------- */
+
+@media only screen and (min-width: $ipad) and (max-height: 970px) {
+
+}
+
+
+
+
+
+
+/* ----------- iPad in landscape ----------- */
+
+// @media only screen and (max-width: 778px) {
+@media only screen and (max-device-width: $ipad) and (orientation: landscape) {
+  
+}
+
+
+/* ----------- smaller than 360px ----------- */
+
+@media only screen and (min-device-width: 360px) {
+
+    /*<!--=============== IOS DEVICES ===============-->*/
+    @supports (-webkit-touch-callout: none) {
+        /* CSS specific to iOS devices */
+    
+    }
+    /*<!--=============== NOT IOS DEVICES ===============-->*/
+    @supports not (-webkit-touch-callout: none) {
+        /* CSS for other than iOS devices */
+      
+    }
+}
+
+//When keyboard is present hide slideshow
+@media screen and (max-width: $ipad) and (max-height: 450px) {
+ 
 }
