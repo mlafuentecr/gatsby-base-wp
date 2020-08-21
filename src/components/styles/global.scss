@@ -170,6 +170,14 @@ main{
 
 }
 
+/* --------- Desktop  si es amyor que ipad 780px  ------ */
+@media only screen and (min-width: $laptop) {
+    .container {
+        width: $laptop;
+    }
+
+}
+
 
 /* ----------- laptops si es mas grande que ipad pero heigh ----------- */
 

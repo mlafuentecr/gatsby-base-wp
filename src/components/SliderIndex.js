@@ -82,7 +82,8 @@ const SliderIndex = props => {
       if (videoImgSwitch) {
         return videoUrl
       } else {
-        if(backgroundImg.sourceUrl != null){
+
+        if(backgroundImg){
           return backgroundImg.sourceUrl
         }else{
           return ''
