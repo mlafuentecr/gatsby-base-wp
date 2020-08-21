@@ -30,6 +30,17 @@ const IndexPage = props => {
       </div>
   }
 
+  const Content =(props)=>{
+    //Jala el contenido de index por numero
+    //seccion 1 , 2 si existe
+    if(indexSeccions[props.number]){
+    return (
+      <div dangerouslySetInnerHTML={{__html: indexSeccions[props.number].seccion}} />
+    )
+  }else{
+    return ''
+  }
+  }
 
   return (
     <LayoutIndex>
@@ -37,8 +48,8 @@ const IndexPage = props => {
         <div className="wrap">
           <div className="container mainText">
 
-          <div dangerouslySetInnerHTML={{__html: indexSeccions[0].seccion}} />
-         
+          <Content number={0} />
+        
           </div>
           </div>
       </div>
@@ -49,7 +60,7 @@ const IndexPage = props => {
         <div className="div-center section color2 full">
         <div className="wrap">
           <div className="container mainText">
-            <div dangerouslySetInnerHTML={{__html: indexSeccions[0].seccion}} />
+            <Content number={1} />
           </div>
           </div>
       </div>
@@ -59,7 +70,7 @@ const IndexPage = props => {
       <div className="div-center section fullBox">
         <div className="wrap">
           <div className="container mainText">
-          <div dangerouslySetInnerHTML={{__html: indexSeccions[0].seccion}} />
+          <Content number={2} />
           </div>
           </div>
       </div>
@@ -68,7 +79,7 @@ const IndexPage = props => {
       <div className={`div-center parallax parallax1`} style={{ backgroundImage:`url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/08/sertvices.jpg)`}} >
       <div className="wrap">
           <div className="container mainText">
-          <div dangerouslySetInnerHTML={{__html: indexSeccions[0].seccion}} />
+          <Content number={3} />
           </div>
           </div>
       </div>

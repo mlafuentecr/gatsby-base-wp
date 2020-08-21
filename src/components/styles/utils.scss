@@ -33,7 +33,7 @@ h2 {
         letter-spacing: 0.5px;
         font-weight: bold;
     }
-    .mainText{
+    .mainText {
         font-size: 16px;
         color: #504e4e;
         line-height: 34px;
@@ -47,6 +47,11 @@ h2 {
 
 .full {
     width: 100%;
+}
+
+.alignleft {
+    float: left;
+    padding: 20px;
 }
 
 #scrollDiv {
@@ -143,7 +148,6 @@ $curveWidth: 200%;
     div {
         color: white;
         background-color: $menuBackground;
-        display: flex;
         align-items: flex-end;
         justify-content: center;
         flex-wrap: wrap;
@@ -189,35 +193,43 @@ $curveWidth: 200%;
     justify-content: space-evenly;
 }
 
+.blocks-gallery-item__caption {
+    width: 100%;
+    background: #ffffff;
+    padding: 5px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    top: -70px;
+    position: relative;
+    transition: top .9s ease;
+}
+
 .blocks-gallery-item {
     padding: 20px;
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 200px;
+    align-items: self-end;
     overflow: hidden;
     img {
         display: block;
         height: 100%;
+        position: relative;
+        z-index: 100;
     }
     figcaption {
         position: relative;
         //opacity: 0;
         overflow: hidden;
-        strong {
-            top: -30px;
-            position: relative;
-            transition: top .9s ease;
-        }
     }
     &:hover {
         figcaption {
             opacity: 1;
             overflow: hidden;
-            strong {
-                top: 0;
-            }
+        }
+        .blocks-gallery-item__caption {
+            top: 0;
         }
     }
 }
@@ -301,26 +313,23 @@ $curveWidth: 200%;
 }
 
 
-
 /*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
+
 
 /*<!--=============== IOS DEVICES ===============-->*/
 
 @supports (-webkit-touch-callout: none) {
     /* CSS specific to iOS devices */
-
 }
 
 @supports not (-webkit-touch-callout: none) {
     /* CSS for other than iOS devices */
-
 }
 
 
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
+
 @media only screen and (min-width: $ipad) {
-
-
     .pgindex {
         h1 {
             font-size: 60px;
@@ -340,54 +349,39 @@ $curveWidth: 200%;
             letter-spacing: 0.5px;
             font-weight: bold;
         }
-        .mainText{
+        .mainText {
             font-size: 22px;
             color: #504e4e;
             line-height: 34px;
             letter-spacing: 0.5px;
         }
     }
-
-    
 }
 
 
 /* ----------- laptops si es mas grande que ipad pero heigh ----------- */
 
-@media only screen and (min-width: $ipad) and (max-height: 970px) {
-
-}
-
-
-
-
+@media only screen and (min-width: $ipad) and (max-height: 970px) {}
 
 
 /* ----------- iPad in landscape ----------- */
 
 // @media only screen and (max-width: 778px) {
-@media only screen and (max-device-width: $ipad) and (orientation: landscape) {
-  
-}
+@media only screen and (max-device-width: $ipad) and (orientation: landscape) {}
 
 
 /* ----------- smaller than 360px ----------- */
 
 @media only screen and (min-device-width: 360px) {
-
     /*<!--=============== IOS DEVICES ===============-->*/
     @supports (-webkit-touch-callout: none) {
         /* CSS specific to iOS devices */
-    
     }
     /*<!--=============== NOT IOS DEVICES ===============-->*/
     @supports not (-webkit-touch-callout: none) {
         /* CSS for other than iOS devices */
-      
     }
 }
 
 //When keyboard is present hide slideshow
-@media screen and (max-width: $ipad) and (max-height: 450px) {
- 
-}
+@media screen and (max-width: $ipad) and (max-height: 450px) {}

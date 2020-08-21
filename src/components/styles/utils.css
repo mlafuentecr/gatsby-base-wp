@@ -61,6 +61,11 @@ h2 {
   width: 100%;
 }
 
+.alignleft {
+  float: left;
+  padding: 20px;
+}
+
 #scrollDiv {
   height: 25px;
   position: fixed;
@@ -184,9 +189,6 @@ h2 {
 .color2 div {
   color: white;
   background-color: #2a0d58;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -254,6 +256,18 @@ h2 {
           justify-content: space-evenly;
 }
 
+.blocks-gallery-item__caption {
+  width: 100%;
+  background: #ffffff;
+  padding: 5px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  top: -70px;
+  position: relative;
+  -webkit-transition: top .9s ease;
+  transition: top .9s ease;
+}
+
 .blocks-gallery-item {
   padding: 20px;
   -webkit-box-flex: 1;
@@ -265,16 +279,17 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 200px;
+  -webkit-box-align: self-end;
+      -ms-flex-align: self-end;
+          align-items: self-end;
   overflow: hidden;
 }
 
 .blocks-gallery-item img {
   display: block;
   height: 100%;
+  position: relative;
+  z-index: 100;
 }
 
 .blocks-gallery-item figcaption {
@@ -282,19 +297,12 @@ h2 {
   overflow: hidden;
 }
 
-.blocks-gallery-item figcaption strong {
-  top: -30px;
-  position: relative;
-  -webkit-transition: top .9s ease;
-  transition: top .9s ease;
-}
-
 .blocks-gallery-item:hover figcaption {
   opacity: 1;
   overflow: hidden;
 }
 
-.blocks-gallery-item:hover figcaption strong {
+.blocks-gallery-item:hover .blocks-gallery-item__caption {
   top: 0;
 }
 

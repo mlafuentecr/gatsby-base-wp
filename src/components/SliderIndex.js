@@ -56,7 +56,7 @@ const SliderIndex = props => {
     querySlider.WP_1.hDsettings.nodes[0].acf_headline.headline
 
   const bannerArray = headlinesArray.map((headline, index) => {
-    console.log(headline)
+    
     const {
       desktopImgSwitch,
       mobileImgSwitch,
@@ -124,10 +124,7 @@ const SliderIndex = props => {
     )
   })
 
-  // <div data-src="https://caferati.me/images/series/bojack-4.jpg" />
-  // <div data-src="/slider/bojack-5.jpg" />
-  //creo un nuevo array sin banner que no esten enable
-  //const bannerArray = headlineItemTest.filter(Boolean);
+ 
 
   const AutoplaySlider = withAutoplay(AwesomeSlider)
 
