@@ -35,7 +35,7 @@ const IndexPage = props => {
     //seccion 1 , 2 si existe
     if(indexSeccions[props.number]){
     return (
-      <div dangerouslySetInnerHTML={{__html: indexSeccions[props.number].seccion}} />
+      <div  dangerouslySetInnerHTML={{__html: indexSeccions[props.number].seccion}} />
     )
   }else{
     return ''
@@ -46,43 +46,39 @@ const IndexPage = props => {
     <LayoutIndex>
       <div className="div-center section color1">
         <div className="wrap">
-          <div className="container mainText">
-
-          <Content number={0} />
-        
-          </div>
+            <div className="container mainText boxes4">
+            <Content number={0} />
+            </div>
           </div>
       </div>
 
-      <Curve  classname="color2 hr-curve" />
+    
 
-
-        <div className="div-center section color2 full">
+      <div className={`div-center parallax parallax1 bgBlue`} >
         <div className="wrap">
-          <div className="container mainText">
-            <Content number={1} />
-          </div>
+            <div className="container mainText boxes2">
+              <Content number={1} />
+            </div>
           </div>
       </div>
-      <Curve  classname="color2 invert  hr-curve" />
-        {/* <Curve  classname="color2  hr-curve" /> */}
-       
+    
       <div className="div-center section fullBox">
         <div className="wrap">
-          <div className="container mainText">
-          <Content number={2} />
-          </div>
+              <div className="container mainText boxes2">
+              <Content number={2} />
+              </div>
           </div>
       </div>
    
-
-      <div className={`div-center parallax parallax1`} style={{ backgroundImage:`url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/08/sertvices.jpg)`}} >
-      <div className="wrap">
-          <div className="container mainText">
-          <Content number={3} />
-          </div>
+      <div className="div-center section parallax parallax1 `" style={{ backgroundImage:`url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/08/game-development-Costa-ric-pa.jpg)`}} >
+        <div className="wrap">
+              <div className="container mainText boxes2">
+              <Content number={3} />
+              </div>
           </div>
       </div>
+   
+  
 
 
     </LayoutIndex>

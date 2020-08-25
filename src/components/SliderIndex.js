@@ -25,6 +25,9 @@ const SliderIndex = props => {
                   link
                 }
                 bgcolor
+                bgSize
+                imageVerticalPosition
+                imageHorizontalPosition
               }
               mobile {
                 hPosition
@@ -48,8 +51,7 @@ const SliderIndex = props => {
         }
       }
     }
-  }
-  
+  }  
   `)
 
   const headlinesArray =
@@ -70,6 +72,9 @@ const SliderIndex = props => {
       hPosition,
       bgcolor,
       text,
+      bgSize,
+      imageVerticalPosition: imgV,
+      imageHorizontalPosition: imgH,
     } = headline.desktop
     const {
       backgroundImg: bgMobile,
@@ -95,19 +100,19 @@ const SliderIndex = props => {
     const headlineContent = () => {
 
       if (images && !textSwitch) {
-        return <div style={{ justifyContent: hPosition, alignItems:vPosition}} >
+        return <div style={{ justifyContent: imgH, alignItems:imgV}} >
           <img src={`${images.sourceUrl}`} alt={`${images.altText}`} />
           </div>
       }
 
       if (images && textSwitch) {
-        return <div className='bannerHolder' style={{ justifyContent: hPosition, alignItems:vPosition}} >
+        return <div className='bannerHolder' style={{ justifyContent: imgH, alignItems:imgV}} >
           <img src={`${images.sourceUrl}`} alt={`${images.altText}`} />
           <div className="bannertext" dangerouslySetInnerHTML={{ __html: `${text}` }}></div>
         </div>
       }
       if (textSwitch) {
-        return <div className='bannerHolder' style={{ justifyContent: hPosition, alignItems:vPosition}} >
+        return <div className='bannerHolder' style={{ justifyContent: imgH, alignItems:imgV}} >
           <div className="bannertext" dangerouslySetInnerHTML={{ __html: `${text}` }}></div>
         </div>
       }
@@ -119,7 +124,7 @@ const SliderIndex = props => {
    
 
     return (
-      <div key={index} style={{ backgroundColor:bgcolor, backgroundImage: `url(${bgUrl()})` }}>
+      <div key={index} style={{backgroundPositionY:vPosition, backgroundPositionX: hPosition, backgroundSize:bgSize, backgroundColor:bgcolor, backgroundImage: `url(${bgUrl()})` }}>
         {headlineContent()}
       </div>
     )

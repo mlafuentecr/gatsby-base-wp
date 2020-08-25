@@ -38,9 +38,19 @@ h2 {
         color: #504e4e;
         line-height: 34px;
         letter-spacing: 0.5px;
+   
+
     }
 }
 
+.pgindex{
+    .mainText{
+       div {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
 .title-section {
     flex-wrap: wrap;
 }
@@ -169,19 +179,67 @@ $curveWidth: 200%;
 
 .parallax {
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+    position: relative;
 }
-
+.bgBlue {
+    background: #002256;
+}
 .div-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.box{
+    flex-direction: column;
+    h2{
+        height: auto;
+    }
+}
+.boxes2 div {
+    display: flex;
+    .box{
+        width: 50%;
+        font-size: 16px;
+        padding: 20px;
+    }
+    img {
+        margin: 0px auto;
+        margin-bottom: 50px;
+    }
+}
 
+.boxes3 div {
+    display: flex;
+    .box{
+        width: 33%;
+        font-size: 16px;
+        padding: 20px;
+    }
+    img {
+        margin: 0px auto;
+        margin-bottom: 50px;
+    }
+}
+
+
+.boxes4 div {
+    display: flex;
+    .box{
+        width: 25%;
+        font-size: 16px;
+        padding: 20px;
+    }
+    img {
+        margin: 0px auto;
+        margin-bottom: 50px;
+    }
+}
 
 /*<!--=============== Gallery  ===============-->*/
 
@@ -232,6 +290,10 @@ $curveWidth: 200%;
             top: 0;
         }
     }
+}
+
+.size-full {
+    max-width: initial;
 }
 
 .columns-1 {
