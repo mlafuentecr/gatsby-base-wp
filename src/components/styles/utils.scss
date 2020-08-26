@@ -38,19 +38,18 @@ h2 {
         color: #504e4e;
         line-height: 34px;
         letter-spacing: 0.5px;
-   
-
     }
 }
 
-.pgindex{
-    .mainText{
-       div {
+.pgindex {
+    .mainText {
+        div {
             display: flex;
             flex-wrap: wrap;
         }
     }
 }
+
 .title-section {
     flex-wrap: wrap;
 }
@@ -187,23 +186,27 @@ $curveWidth: 200%;
     overflow: hidden;
     position: relative;
 }
+
 .bgBlue {
     background: #002256;
 }
+
 .div-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.box{
+
+.box {
     flex-direction: column;
-    h2{
+    h2 {
         height: auto;
     }
 }
+
 .boxes2 div {
     display: flex;
-    .box{
+    .box {
         width: 50%;
         font-size: 16px;
         padding: 20px;
@@ -216,7 +219,7 @@ $curveWidth: 200%;
 
 .boxes3 div {
     display: flex;
-    .box{
+    .box {
         width: 33%;
         font-size: 16px;
         padding: 20px;
@@ -227,10 +230,9 @@ $curveWidth: 200%;
     }
 }
 
-
 .boxes4 div {
     display: flex;
-    .box{
+    .box {
         width: 25%;
         font-size: 16px;
         padding: 20px;
@@ -240,6 +242,7 @@ $curveWidth: 200%;
         margin-bottom: 50px;
     }
 }
+
 
 /*<!--=============== Gallery  ===============-->*/
 
@@ -347,6 +350,129 @@ $curveWidth: 200%;
     }
 }
 
+#formbasic {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    div {
+        display: flex;
+        flex-direction: row;
+        margin: 10% auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .box {
+        max-width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+        margin: 0px;
+    }
+    h2 {
+        color: black;
+        margin: 0px;
+        padding: 0px;
+        font-size: 5vw;
+    }
+    form {
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+        border-top-style: solid;
+        border-color: $menuHover;
+        border-top-width: 5px;
+        padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    margin: 10%;
+        fieldset {
+            border: none;
+        }
+        label {
+            line-height: 1.5;
+            font-family: "Roboto", sans-serif;
+            font-weight: normal;
+            min-width: 20%;
+            color:gray;
+        }
+        textarea#message {
+            min-height: 150px;
+            min-width: 80%;
+        }
+        input:not([type]),
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=url],
+        input[type=time],
+        input[type=date],
+        input[type=datetime],
+        input[type=datetime-local],
+        input[type=tel],
+        input[type=number],
+        input[type=search],
+        textarea.materialize-textarea {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #9e9e9e;
+            border-radius: 0;
+            outline: none;
+            height: 3rem;
+            width: 100%;
+            font-size: 1rem;
+            margin: 0 0 20px 0;
+            padding: 0;
+            box-shadow: none;
+            box-sizing: content-box;
+            transition: all 0.3s;
+        }
+    }
+}
+
+.btn, .btn-large, .btn-flat {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    margin: 20px;
+}
+.send{
+    text-decoration: none;
+    color: #fff;
+    background-color: $menuHover;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+button {
+    appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(buttontext, rgb(170, 170, 170));
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(74, 74, 74));
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-image: initial;
+}
 
 /* Flashing */
 

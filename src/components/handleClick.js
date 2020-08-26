@@ -1,13 +1,12 @@
 //HANDLE CLICK ****************************************************
 function handleChick(e) {
 
-  console.log(`manejando click ${e.target.className}`)
-  console.log(`manejando click ${JSON.stringify(e.target.dataset.modal)}`)
+  // console.log(`manejando click ${e.target.className}`)
+  // console.log(`manejando click ${JSON.stringify(e.target.dataset.modal)}`)
 
   const firstDiv = document.getElementById('___gatsby');
     //OPEN DRAW *********************************
     if (e.target.classList.contains('btn-menu')) {
-      console.log(`Draw`)
       firstDiv.classList.toggle('openDraw')
     }
 
