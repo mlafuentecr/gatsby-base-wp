@@ -103,7 +103,7 @@ function handleChick1(e) {
         />
         <main >{children}</main>
 
-        <Modal show={showModal}  containerStyle={{width:"600px"}} >
+        <Modal show={showModal}  containerStyle={{ maxWidth:"800px" , width:"80%"}} >
           <div className="close" onClick={()=>setShowModal(false)}>X</div>
           <div dangerouslySetInnerHTML={{__html: modalContent}}/>
         </Modal>

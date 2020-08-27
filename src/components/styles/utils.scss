@@ -498,7 +498,9 @@ button {
 }
 
 /* Flashing */
-
+.blocks-gallery-grid li {
+    min-width: 50%;
+}
 .blocks-gallery-item figure:hover img {
     opacity: 1;
     -webkit-animation: flash 1.5s;
@@ -570,9 +572,11 @@ button {
     }
    
 
-
+    .blocks-gallery-grid li {
+        min-width: 33%;
+    }
     .pgindex {
-
+      
         .mainText {
             div {
                 display: flex;

@@ -28,6 +28,7 @@ const SliderIndex = props => {
                 bgSize
                 imageVerticalPosition
                 imageHorizontalPosition
+                link
               }
               mobile {
                 hPosition
@@ -51,7 +52,7 @@ const SliderIndex = props => {
         }
       }
     }
-  }  
+  }
   `)
 
   const headlinesArray =
@@ -73,6 +74,7 @@ const SliderIndex = props => {
       bgcolor,
       text,
       bgSize,
+      link,
       imageVerticalPosition: imgV,
       imageHorizontalPosition: imgH,
     } = headline.desktop
@@ -121,10 +123,14 @@ const SliderIndex = props => {
 
     }
 
-   
+   const clickHeadline=()=>{
+     if(link){
+      window.open(link, "_self")
+      }
+   }
 
     return (
-      <div key={index} style={{backgroundPositionY:vPosition, backgroundPositionX: hPosition, backgroundSize:bgSize, backgroundColor:bgcolor, backgroundImage: `url(${bgUrl()})` }}>
+      <div key={index} onClick={()=>clickHeadline()} style={{backgroundPositionY:vPosition, backgroundPositionX: hPosition, backgroundSize:bgSize, backgroundColor:bgcolor, backgroundImage: `url(${bgUrl()})` }}>
         {headlineContent()}
       </div>
     )

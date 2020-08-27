@@ -22,7 +22,7 @@ const IndexPage = props => {
   `)
 
   const indexSeccions = querySettings.WP_1.page.acf_index.seccions
-  console.log(indexSeccions[0].seccion);
+  
 
   const Curve =(props)=>{
     return <div className={props.classname} >
