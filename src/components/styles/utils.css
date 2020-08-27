@@ -24,6 +24,14 @@ h2 {
   color: #E70F0F;
 }
 
+.pgindex .awssld__wrapper img {
+  width: 100%;
+}
+
+.pgindex img {
+  max-width: initial;
+}
+
 .pgindex h1 {
   font-size: 40px;
   line-height: 45px;
@@ -58,6 +66,24 @@ h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.pgindex .boxes2 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .title-section {
@@ -269,7 +295,7 @@ h2 {
 }
 
 .boxes2 div .box {
-  width: 50%;
+  width: 100%;
   font-size: 16px;
   padding: 0px;
 }
@@ -618,25 +644,25 @@ button {
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
 @media only screen and (min-width: 768px) {
   .pgindex h1 {
-    font-size: 60px;
+    font-size: auto;
     line-height: 75px;
     letter-spacing: 0.5px;
     font-weight: bold;
   }
   .pgindex h2 {
-    font-size: 60px;
+    font-size: auto;
     line-height: 75px;
     letter-spacing: 0.5px;
     font-weight: bold;
   }
   .pgindex h3 {
-    font-size: 50px;
+    font-size: auto;
     line-height: 75px;
     letter-spacing: 0.5px;
     font-weight: bold;
   }
   .pgindex .mainText {
-    font-size: 22px;
+    font-size: auto;
     color: #504e4e;
     line-height: 34px;
     letter-spacing: 0.5px;
@@ -647,6 +673,23 @@ button {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .pgindex .boxes2 div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .boxes4 div {
     display: -webkit-box;
