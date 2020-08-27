@@ -98,7 +98,7 @@ h2.gradient-purple {
 }
 
 .section {
-  min-height: 800px;
+  min-height: auto;
 }
 
 .pgindex .mainText div {
@@ -326,6 +326,12 @@ h2.gradient-purple {
 }
 
 .box h2 {
+  height: auto;
+  font-size: 20px;
+}
+
+.box img {
+  width: 100%;
   height: auto;
 }
 
@@ -736,6 +742,9 @@ button {
     color: #504e4e;
     line-height: 34px;
     letter-spacing: 0.5px;
+  }
+  .pgindex .section {
+    min-height: 800px;
   }
   .blocks-gallery-grid li {
     min-width: 33%;

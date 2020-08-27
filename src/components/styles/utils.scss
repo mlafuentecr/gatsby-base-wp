@@ -92,7 +92,7 @@ h2.gradient-purple {
 }
 
 .section {
-    min-height: 800px;
+    min-height: auto;
 }
 
 .pgindex {
@@ -266,6 +266,11 @@ $curveWidth: 200%;
 .box {
     flex-direction: column;
     h2 {
+        height: auto;
+        font-size: 20px;
+    }
+    img {
+        width: 100%;
         height: auto;
     }
 }
@@ -638,6 +643,11 @@ button {
             letter-spacing: 0.5px;
        
         }
+
+        .section {
+            min-height: 800px;
+        }
+
     }
    
 

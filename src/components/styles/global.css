@@ -189,7 +189,7 @@ select {
 #mainnav-mobi ul li a {
   text-decoration: none;
   height: 50px;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 100px;
   padding: 0 50px;
   color: #fff;
@@ -631,9 +631,13 @@ h2.gradient-purple {
   letter-spacing: 0.5px;
 }
 
+.box h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
 .section {
-  min-height: 800px;
-  height: 800px;
+  min-height: auto;
 }
 
 .pgindex .mainText div {
@@ -861,6 +865,12 @@ h2.gradient-purple {
 }
 
 .box h2 {
+  height: auto;
+  font-size: 20px;
+}
+
+.box img {
+  width: 100%;
   height: auto;
 }
 
@@ -1271,6 +1281,9 @@ button {
     color: #504e4e;
     line-height: 34px;
     letter-spacing: 0.5px;
+  }
+  .pgindex .section {
+    min-height: 800px;
   }
   .blocks-gallery-grid li {
     min-width: 33%;
