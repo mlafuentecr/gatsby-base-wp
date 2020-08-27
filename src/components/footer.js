@@ -26,8 +26,14 @@ const Footer = props => {
     document.documentElement.scrollTop = 0
   }
 
+
+  if (typeof window === 'undefined'){
+    console.log('Window is not there')
+  }else{
   //IF scroll DIV //go TOP Scroll
   window.addEventListener("scroll", scrollFunc)
+  }
+
 
   
 
