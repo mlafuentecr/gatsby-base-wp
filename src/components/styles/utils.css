@@ -92,6 +92,11 @@ h2.gradient-purple {
   letter-spacing: 0.5px;
 }
 
+.box h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
 .section {
   min-height: 800px;
 }
