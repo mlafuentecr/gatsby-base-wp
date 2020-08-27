@@ -13,6 +13,42 @@ h1 {
 h2 {
     color: $principalColor;
 }
+h2.gradient-red {
+    color: #bc202e;
+   // background: linear-gradient(45deg, #e7af0f 10%, #d80000 90%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 20;
+    line-height: initial !important;
+    font-size: 50px !important;
+}
+h2.gradient-blue  {
+    background: linear-gradient(25deg, #1d8cff 0%, #30cfd0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 20;
+    line-height: initial!important;
+    font-size: 50px!important;
+}
+
+h2.gradient-purple {
+    // background: linear-gradient(25deg, #16aad6 0%, #30d0ff 10%, #e7fd0c 100%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    color: white;
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 20;
+    line-height: initial!important;
+    font-size: 50px!important;
+}
 
 .pgindex {
     .awssld__wrapper{
@@ -48,6 +84,10 @@ h2 {
         line-height: 34px;
         letter-spacing: 0.5px;
     }
+}
+
+.section {
+    min-height: 800px;
 }
 
 .pgindex {
@@ -266,6 +306,30 @@ $curveWidth: 200%;
     }
 }
 
+/* Zoom Out #2 */
+.hover04  img {
+	width: 400px;
+	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover04:hover img {
+	width: 300px;
+}
+
+/* Rotate */
+.hover06 img {
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+    
+
+}
+.hover06:hover img {
+    -webkit-transform: rotate(15deg) scale(1.4);
+	transform: rotate(15deg) scale(1.4);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
 
 /*<!--=============== Gallery  ===============-->*/
 

@@ -24,6 +24,38 @@ h2 {
   color: #E70F0F;
 }
 
+h2.gradient-red {
+  color: #bc202e;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 20;
+  line-height: initial !important;
+  font-size: 50px !important;
+}
+
+h2.gradient-blue {
+  background: linear-gradient(25deg, #1d8cff 0%, #30cfd0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 20;
+  line-height: initial !important;
+  font-size: 50px !important;
+}
+
+h2.gradient-purple {
+  color: white;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 20;
+  line-height: initial !important;
+  font-size: 50px !important;
+}
+
 .pgindex .awssld__wrapper img {
   width: 100%;
 }
@@ -58,6 +90,10 @@ h2 {
   color: #504e4e;
   line-height: 34px;
   letter-spacing: 0.5px;
+}
+
+.section {
+  min-height: 800px;
 }
 
 .pgindex .mainText div {
@@ -129,7 +165,7 @@ h2 {
 }
 
 #scrollTop:hover {
-  background: #a579eb;
+  background: #fdeae9;
 }
 
 .hide {
@@ -222,7 +258,7 @@ h2 {
 
 .color2 div {
   color: white;
-  background-color: #2a0d58;
+  background-color: #cf1918;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -237,7 +273,7 @@ h2 {
   fill: white;
   height: 100%;
   width: 200%;
-  background: #2a0d58;
+  background: #cf1918;
 }
 
 .color2.invert {
@@ -339,6 +375,31 @@ h2 {
 .boxes4 div img {
   margin: 0px auto;
   margin-bottom: 50px;
+}
+
+/* Zoom Out #2 */
+.hover04 img {
+  width: 400px;
+  height: auto;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.hover04:hover img {
+  width: 300px;
+}
+
+/* Rotate */
+.hover06 img {
+  -webkit-transform: rotate(0) scale(1);
+  transform: rotate(0) scale(1);
+}
+
+.hover06:hover img {
+  -webkit-transform: rotate(15deg) scale(1.4);
+  transform: rotate(15deg) scale(1.4);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 /*<!--=============== Gallery  ===============-->*/
@@ -503,7 +564,7 @@ h2 {
   -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
           box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   border-top-style: solid;
-  border-color: #a579eb;
+  border-color: #fdeae9;
   border-top-width: 5px;
   padding: 20px;
   width: 90%;
@@ -575,7 +636,7 @@ h2 {
 .send {
   text-decoration: none;
   color: #fff;
-  background-color: #a579eb;
+  background-color: #fdeae9;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: .2s ease-out;

@@ -74,7 +74,8 @@ const SEO = ({ description, lang, meta, title, author }) =>{
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      </Helmet>
   )
 }
 
