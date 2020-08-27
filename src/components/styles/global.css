@@ -1069,20 +1069,23 @@ h2.gradient-purple {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
 }
 
 #formbasic div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 10% auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1186,7 +1189,7 @@ h2.gradient-purple {
 .send {
   text-decoration: none;
   color: #fff;
-  background-color: #fdeae9;
+  background-color: #E70F0F;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: .2s ease-out;
@@ -1258,6 +1261,12 @@ button {
 /*<!--=============== IOS DEVICES ===============-->*/
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
 @media only screen and (min-width: 768px) {
+  #formbasic div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   .pgindex h1 {
     font-size: auto;
     line-height: 75px;
@@ -1311,6 +1320,10 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .box img {
+    width: 70%;
+    height: auto;
   }
   .boxes4 div {
     display: -webkit-box;

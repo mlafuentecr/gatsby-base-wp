@@ -451,10 +451,14 @@ $curveWidth: 200%;
     display: flex;
     justify-self: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+
     div {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         margin: 10% auto;
         justify-content: center;
         align-items: center;
@@ -540,7 +544,7 @@ $curveWidth: 200%;
 .send{
     text-decoration: none;
     color: #fff;
-    background-color: $menuHover;
+    background-color: $principalColor;
     text-align: center;
     letter-spacing: .5px;
     transition: .2s ease-out;
@@ -617,6 +621,11 @@ button {
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
 
 @media only screen and (min-width: $ipad) {
+    #formbasic {
+        div {
+            flex-direction: row;
+        }}
+
     .pgindex {
         h1 {
             font-size: auto;
@@ -674,7 +683,12 @@ button {
             }
         }
     }
-
+    .box{
+        img{
+            width: 70%;
+    height: auto;
+        }
+    }
 
     .boxes4 div {
         display: flex;

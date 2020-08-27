@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import LayoutIndex from "../components/layoutinternal"
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
-
+import Zoom from "react-reveal/Zoom"
 import { useFormik } from 'formik'
 import axios from 'axios'
 
@@ -215,7 +215,7 @@ const ContactForm = () => {
 
 <GoogleReCaptchaProvider reCaptchaKey="6LeY0cMZAAAAAPsC-x2rHwa53LMZVbomSST8HeMC">
 
-
+<Zoom>
     <div id="formbasic">
 
     <form onSubmit={handleSubmit1}>
@@ -273,7 +273,7 @@ const ContactForm = () => {
       </div>
     </form>
     </div>
-
+    </Zoom>
         </GoogleReCaptchaProvider>
 
     </LayoutIndex>

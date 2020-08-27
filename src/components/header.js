@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from 'react';
 
-import SEO from "../components/seo"
 import { Link } from "gatsby"
 import MenuItems from "./menu"
 
 const Header = props => {
+
+ 
+
   return (
     <>
       <header id="header" className="header style-color clearfix">
