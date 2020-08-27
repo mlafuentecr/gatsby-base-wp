@@ -46,7 +46,6 @@ h2 {
         div {
             display: flex;
             flex-wrap: wrap;
-            flex-direction: row;
         }
     }
 }
@@ -78,7 +77,7 @@ h2 {
     width: 40px;
     border-radius: 4px 4px 0 0;
     position: absolute;
-    right: 1%;
+    right: 20px;
     display: flex;
     justify-content: center;
     color: white;
@@ -208,7 +207,7 @@ $curveWidth: 200%;
 .boxes2 div {
     display: flex;
     .box {
-        width: 100%;
+        width: 50%;
         font-size: 16px;
         padding: 0px;
     }
@@ -552,7 +551,7 @@ button {
             div {
                 display: flex;
                 flex-wrap: wrap;
-                flex-direction: column;
+               
             }
         }
     }

@@ -596,10 +596,6 @@ h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .title-section {
@@ -632,7 +628,7 @@ h2 {
   width: 40px;
   border-radius: 4px 4px 0 0;
   position: absolute;
-  right: 1%;
+  right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -811,14 +807,16 @@ h2 {
 }
 
 .boxes2 div .box {
-  width: 100%;
+  width: 50%;
   font-size: 16px;
-  padding: 20px;
+  padding: 0px;
 }
 
 .boxes2 div img {
   margin: 0px auto;
   margin-bottom: 50px;
+  max-width: 100%;
+  height: auto;
 }
 
 .boxes3 div {
@@ -1187,10 +1185,6 @@ button {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   .boxes4 div {
     display: -webkit-box;
