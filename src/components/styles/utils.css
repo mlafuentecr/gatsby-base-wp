@@ -392,6 +392,19 @@ h2.gradient-purple {
   margin-bottom: 50px;
 }
 
+/* Gray Scale */
+.gray figure img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.gray figure:hover img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
 /* Zoom Out #2 */
 .hover04 img {
   width: 400px;
