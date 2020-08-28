@@ -127,6 +127,10 @@ h2.gradient-purple {
           align-items: center;
 }
 
+.size-large img {
+  height: auto;
+}
+
 .title-section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
