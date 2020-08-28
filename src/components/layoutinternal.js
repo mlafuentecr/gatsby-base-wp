@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import Header from './header'
 import Footer from './footer'
@@ -70,7 +70,7 @@ const {
 } = siteSetting
 
 
-    // //OPEN IMAGE *********************************
+    // //OPEN IMAGE ********************************* window.location.pathname
     // if(e.target.dataset.fullUrl){
     //   //window.open(e.target.dataset.fullUrl); 
     //   document.getElementById("modalContent").innerHTML = `<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"> `
@@ -78,7 +78,6 @@ const {
     // }
 
  
-
 
 
 function handleChick1(e) {

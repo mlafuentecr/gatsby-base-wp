@@ -1503,6 +1503,14 @@ body {
   margin-left: -15px;
 }
 
+.gallery h2 {
+  color: white;
+  background: #8a8a8a;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .footer {
   background-color: #222;
   padding: 85px 0 67px;
