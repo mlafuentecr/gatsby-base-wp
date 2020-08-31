@@ -503,6 +503,130 @@ h2.gradient-purple {
   max-width: initial;
 }
 
+.landing {
+  /*<!--=============== carousel  ===============-->*/
+  /* Translate previous item to the left */
+  /* Translate next item to the right */
+  /* Style navigation buttons to sit in the middle, either side of the carousel. */
+  /* Use pseudo elements to insert arrows inside of navigation buttons */
+}
+
+.landing .columns-1 {
+  background: green;
+}
+
+.landing .blocks-gallery-grid li {
+  min-width: 100%;
+}
+
+.landing .carousel__photo.prev {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.landing .carousel__photo.next {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.landing #carousel {
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+  background: blue;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.landing ul.blocks-gallery-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.landing .nextSlider {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  position: absolute;
+}
+
+.landing .prevSlider {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  position: absolute;
+}
+
+.landing .carousel__button--prev,
+.landing .carousel__button--next {
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #FFF;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  /* Sit on top of everything */
+  border: 1px solid black;
+  /*  opacity: 0;  Hide buttons until carousel is initialised 
+  transition:opacity 1s;*/
+}
+
+.landing .carousel__button--prev {
+  left: 0;
+}
+
+.landing .carousel__button--next {
+  right: 0;
+}
+
+.landing .carousel__button--prev::after,
+.landing .carousel__button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.landing .carousel__button--next::after {
+  left: 47%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.landing .blocks-gallery-item {
+  background: purple;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: inherit;
+}
+
 .columns-1 li {
   min-width: 100%;
 }

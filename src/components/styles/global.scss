@@ -142,6 +142,46 @@ main{
 }
 
 
+
+
+/*<!--=============== Landing  ===============-->*/
+.landing{
+    display: flex;
+    .content {
+        width: 70%;
+        padding: 10px;
+
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+   main {
+        background: red;
+    }
+
+    #formbasic {
+        width: 30%;
+        form {
+            padding: 0px;
+            margin: 0px;
+            max-width: 100%;
+            width: 100%;
+            box-shadow: initial;
+            border-top-width: 0px;
+            label {
+                margin-right: 20px;
+            }
+
+
+        }
+    }
+}
+
+
+
 /*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
 
 /*<!--=============== IOS DEVICES ===============-->*/

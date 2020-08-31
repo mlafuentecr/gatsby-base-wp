@@ -24,16 +24,31 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   result.data.WP_1.pages.nodes.forEach(function (node) {
-    createPage({
-      path: node.slug,
-      component: require.resolve(`./src/templates/page.js`),
-      context: {
-        slug: node.slug,
-        id: node.id,
-        title: node.title,
-        content: node.content,
-      },
-    })
+    if(node.slug.includes('landing') ){
+      createPage({
+        path: node.slug,
+        component: require.resolve(`./src/templates/landing.js`),
+        context: {
+          slug: node.slug,
+          id: node.id,
+          title: node.title,
+          content: node.content,
+        },
+      })
+
+    }else{
+      createPage({
+        path: node.slug,
+        component: require.resolve(`./src/templates/page.js`),
+        context: {
+          slug: node.slug,
+          id: node.id,
+          title: node.title,
+          content: node.content,
+        },
+      })
+    }
+
   })
 
   result.data.WP_1.posts.nodes.forEach(function (node) {
