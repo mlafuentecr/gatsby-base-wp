@@ -451,12 +451,18 @@ background: green;
                         justify-content: end;
                     }
                     .nextSlider {
-                        transform: translateX(100%);
+                        transform: translateX(0px);
+                        transition: transform 280ms ease-out 50ms; 
                         position: absolute;
+                        background: red;
+                        z-index: 500;
                     }
                     .prevSlider {
-                        transform: translateX(-100%);
+                        transform: translateX(0px);
+                        transition: transform 280ms ease-out 50ms; 
                         position: absolute;
+                        background: red;
+                        z-index: 500;
                     }
                   
 /* Style navigation buttons to sit in the middle, either side of the carousel. */
@@ -502,15 +508,12 @@ background: green;
   left: 47%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-                    .blocks-gallery-item {
-                        background: purple;
-                        height: 400px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        overflow: inherit;
-                    }
+ 
 }
+
+
+
+
 
 
 .columns-1 {

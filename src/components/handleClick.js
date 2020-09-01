@@ -1,5 +1,6 @@
 //HANDLE CLICK ****************************************************
 let countSlider = 0;
+let countSliderBack = 4;
 function handleChick(e) {
 
    console.log(`manejando click ${e.target.className}`)
@@ -32,23 +33,46 @@ function handleChick(e) {
         const carousel = document.getElementById('carousel');
         var items = carousel.getElementsByClassName('blocks-gallery-item')
         //.length
-        for (var i = 0; i < items.length-1; i++) {
+        for (var i = 0; i < items.length; i++) {
           items[i].classList.remove(`nextSlider`);
           items[i].classList.remove(`prevSlider`);
         }
 
 
+      //   delay(function(){
+      //     console.log(`5 s`);
+      // }, 5000 ); // end delay
+
         //nextSlider
         if (e.target.classList.contains('carousel__button--next')) {
-          if(countSlider < (items.length-1)){
+         
+          console.log(countSlider);
+          if(countSlider < (items.length)-1){
             countSlider++
+            console.log(countSlider);
+            items[countSlider].classList.add(`nextSlider`);
             }else{
+              items[countSlider].classList.remove(`nextSlider`);
             countSlider = 0;
           }
-          items[countSlider].classList.add(`nextSlider`);
+          
         }
 
           // //prevSlider
+          if (e.target.classList.contains('carousel__button--prev')) {
+            console.log('xxxx');
+            console.log(countSliderBack +' '+ items.length);
+            if(countSliderBack > 1){
+              countSliderBack--
+              console.log(countSliderBack);
+              items[countSliderBack].classList.add(`prevSlider`);
+              }else{
+                items[countSliderBack].classList.remove(`prevSlider`);
+                countSliderBack = 4;
+            }
+            
+          }
+
           // if (e.target.classList.contains('carousel__button--prev')) {
           //   console.log(countSlider);
           //   if(countSlider > 0){
