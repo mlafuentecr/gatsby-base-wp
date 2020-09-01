@@ -1,7 +1,6 @@
-import React, { useState, useEffect  } from 'react';
+import React,{useState} from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Header from './header'
-import Footer from './footer'
+import Header from "./header"
 import './styles/global.css'
 import SEO from '../components/seo'
 import Modal, {closeStyle} from 'simple-react-modal'
@@ -11,7 +10,6 @@ import handleChick from './handleClick'
 const LayoutIndex = ({ children }) => {
 const [showModal, setShowModal] = useState(false); 
 const [modalContent, setModalContent] = useState(''); 
-
 
 const querySettings = useStaticQuery(graphql`
 {
@@ -52,8 +50,10 @@ const querySettings = useStaticQuery(graphql`
         }
       }
     }
+  
   }
 }
+
 `)
 
 //Site ACF

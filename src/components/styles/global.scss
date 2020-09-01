@@ -6,9 +6,7 @@
 //@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
 @import url('../../../static/fonts.css');
 
-
 /*<!--=============== GENERAL STYLES  ===============-->*/
-
 
 html {
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
@@ -20,9 +18,13 @@ html {
     scroll-behavior: smooth;
     height: 100%;
 }
-#___gatsby, #gatsby-focus-wrapper, .wrapper{
+
+#___gatsby,
+#gatsby-focus-wrapper,
+.wrapper {
     height: 100%;
 }
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -34,28 +36,26 @@ body {
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
 }
+
 .container {
     width: 100%;
     margin: auto;
     padding: 0px 15px;
 }
+
 .row {
     margin-right: -15px;
     margin-left: -15px;
-  
 }
-
 
 .gallery {
     h2 {
         color: white;
-        background: #8a8a8a;
         padding: 10px;
         text-transform: uppercase;
         font-weight: 500;
     }
 }
-
 
 .footer {
     background-color: #222;
@@ -70,23 +70,20 @@ body {
     .logo img {
         filter: brightness(0) invert(1);
     }
-   #logo {
+    #logo {
         max-width: 250px;
         font-size: 14px;
         color: gray;
     }
-
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
     }
-
-
-    .social-wrap{
+    .social-wrap {
         width: 40%;
-        ul{
+        ul {
             list-style-type: none;
             color: white;
             display: flex;
@@ -94,90 +91,130 @@ body {
             padding: 0px;
             margin-top: 50px;
         }
-        li{
+        li {
             font-size: 22px;
         }
-        a{
+        a {
             color: white;
             text-decoration-line: none;
-           
-            &:hover{
-                color:$menuHover;
+            &:hover {
+                color: $menuHover;
             }
         }
     }
-
-  
 }
 
 .social-wrap svg:hover {
     color: $menuHover;
 }
+
 .subLink a:hover {
     color: $menuHover;
 }
+
 .subChildren a:hover {
     color: black!important;
 }
 
-main{
+main {
     display: flex;
     flex: 1;
     flex-direction: column;
 }
 
-.mainText{
-
+.mainText {
     flex-direction: column;
     position: relative;
     padding: 90px 15px;
 }
 
-/*<!--=============== Internal  ===============-->*/
-.pgInternal {
 
+/*<!--=============== Internal  ===============-->*/
+
+.pgInternal {
     #header {
         box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.07);
     }
 }
 
-
-
-
+.gallery{
+    .wrap {
+        background-color: #f6f6f6;
+        height: 100%;
+        background-attachment: fixed;
+        background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: #161616;
+        background-color: #f6f6f6;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+ 
+    }
+}
 /*<!--=============== Landing  ===============-->*/
-.landing{
-    display: flex;
 
+.landing {
+   main{
+    display: flex;
+    #formbasic form fieldset {
+        width: 100%;
+      div{
+        flex-wrap: wrap;
+      }
+    }
+    .wrap {
+        background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
+        background-color: #4683ff;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        background-blend-mode: luminosity;
+    
+    }
     .blocks-gallery-item {
-        background: purple;
         height: 250px;
         display: flex;
         justify-content: center;
         align-items: center;
         overflow: inherit;
     }
-
-
     .content {
-        width: 100%;
-        padding: 10px;
-
+        display: flex;
+        flex-flow: wrap;
+        background: white;
+        margin: 10px 0px;
+        border-radius: 15px;
+        padding: 20px;
+        min-height: 750px;
+        transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
     }
-
     .container {
         display: flex;
         flex-direction: column;
+        padding:  10px;
     }
-
-
     #formbasic {
-        width: 100%;
+        min-width: 300px;
+        border-radius: 15px;
+        background: #e8e7e7;
+        min-height: 750px;
+        padding: 15px;
+        -webkit-box-shadow: inset 19px 0px 21px -7px rgba(0,0,0,0.33);
+-moz-box-shadow: inset 19px 0px 21px -7px rgba(0,0,0,0.33);
+box-shadow: inset 19px 0px 21px -7px rgba(0,0,0,0.33);
+        transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
         div {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-       }
-
+            input{
+                border-bottom: 1px solid $menuColor;
+            }
+        }
         form {
             padding: 0px;
             margin: 0px;
@@ -185,134 +222,147 @@ main{
             width: 100%;
             box-shadow: initial;
             border-top-width: 0px;
+            display: flex;
+            flex-wrap: wrap;
+          
             label {
                 margin-right: 20px;
             }
-
-
         }
     }
+   }
 }
 
 
-
 /*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
+
 
 /*<!--=============== IOS DEVICES ===============-->*/
 
 @supports (-webkit-touch-callout: none) {
     /* CSS specific to iOS devices */
-
 }
 
 @supports not (-webkit-touch-callout: none) {
     /* CSS for other than iOS devices */
-
 }
 
 
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
+
 @media only screen and (min-width: $ipad) {
-
-    /*<!--=============== Landing  ===============-->*/
-.landing{
-    margin-top: 30px;
-
-    .blocks-gallery-item {
-        height: 400px;
-        background: yellow;
-    }
-
-
-    .content {
-        width: 70%;
-    }
-    .container {
-        flex-direction: row;
-    }
-    #formbasic {
-        width: 30%;
-    background: #efefef;
-    padding: 15px;
-        div {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: initial;
-       }
-
-    }
-
-}
-
-
     .container {
         width: $ipad;
     }
-
-
-.footer {
-    .container {
-        flex-direction: row;
+    .header-wrap {
+        flex: 1;
     }
-
-    .social-wrap{
-        width: 40%;
-        ul{
-            margin-top: 0px;
+    /*<!--=============== Landing  ===============-->*/
+    .landing {
+       main{
+       
+        .blocks-gallery-item {
+            height: 400px;
+            figure {
+                height: 100%;
+            }
+            img {
+                display: block;
+                position: relative;
+                z-index: 100;
+                max-height: -webkit-fill-available;
+                width: auto;
+            }
+        }
+        .btn, .btn-large, .btn-flat {
+            margin: 5px;
+        }
+        .content{
+            margin: 15px;
+        }
+        .container {
+            flex-direction: row;
+           width: 100%;
+        }
+        input{
+            margin: 0px!important;
+        }
+        #formbasic {
+            h3 {
+                font-size: 32px;
+                color: #3c3c3c;
+                text-align: center;
+                display: inline-block;
+                text-transform: uppercase;
+                position: relative;
+                line-height: initial !important;
+            }
+            
+            padding: 15px;
+            div {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: initial;
+                margin:0px;
+            }
+        }
+       }
+    }
+  
+    .footer {
+        .container {
+            flex-direction: row;
+        }
+        .social-wrap {
+            width: 40%;
+            ul {
+                margin-top: 0px;
+            }
         }
     }
-
-
 }
 
-}
 
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
+
 @media only screen and (min-width: $laptop) {
     .container {
         width: $laptop;
     }
-
+   
+   .landing{
+   main{
+    .mainText{
+        width: $laptop;
+        }
+   }
+   }
 }
 
 
 /* ----------- laptops si es mas grande que ipad pero heigh ----------- */
 
-@media only screen and (min-width: $ipad) and (max-height: 970px) {
-
-}
-
-
-
-
+@media only screen and (min-width: $ipad) and (max-height: 970px) {}
 
 
 /* ----------- iPad in landscape ----------- */
 
 // @media only screen and (max-width: 778px) {
-@media only screen and (max-device-width: $ipad) and (orientation: landscape) {
-  
-}
+@media only screen and (max-device-width: $ipad) and (orientation: landscape) {}
 
 
 /* ----------- smaller than 360px ----------- */
 
 @media only screen and (min-device-width: 360px) {
-
     /*<!--=============== IOS DEVICES ===============-->*/
     @supports (-webkit-touch-callout: none) {
         /* CSS specific to iOS devices */
-    
     }
     /*<!--=============== NOT IOS DEVICES ===============-->*/
     @supports not (-webkit-touch-callout: none) {
         /* CSS for other than iOS devices */
-      
     }
 }
 
 //When keyboard is present hide slideshow
-@media screen and (max-width: $ipad) and (max-height: 450px) {
- 
-}
-
+@media screen and (max-width: $ipad) and (max-height: 450px) {}

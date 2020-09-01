@@ -25,12 +25,12 @@ const Form = () => {
 
   //When Submit Form
   function handleSubmit1(event) {
-    console.log(`11xxxxxxxxxxxxxx ${event}`)
+  
     event.preventDefault()
     setIsSubmitting(true)
 
     const data = new FormData(event.target)
-    console.log(`222xxxxxxxxxxxxxx ${fullname}`)
+   
     //2 SET INFO TO SEND
     data.set("your-name", fullname)
     data.set("your-email", email)
@@ -96,9 +96,10 @@ const Form = () => {
       <div id="formbasic">
 
       <form onSubmit={handleSubmit1}>
+    <h3>  Hablemos y trabajemos juntos</h3>
         <fieldset>
           <div>
-            <label htmlFor="fullname">fullname*</label>
+            <label htmlFor="fullname">Nombre*</label>
             <input
               id="fullname"
               name="fullname"
@@ -145,8 +146,7 @@ const Form = () => {
         <div>
       
           <button className ='btn send' type="submit"  disabled={isSubmitting}>Send</button>
-          <input className ='btn' type="reset" value="Clear" />
-  
+         
         </div>
       </form>
       </div>

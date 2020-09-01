@@ -449,16 +449,33 @@ h2.gradient-purple {
           justify-content: space-evenly;
 }
 
+.blocks-gallery-grid li {
+  background: red;
+  margin: 10px !important;
+  min-height: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .blocks-gallery-item__caption {
   width: 100%;
-  background: #ffffff;
-  padding: 5px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  padding: 10px;
   top: -70px;
   position: relative;
   -webkit-transition: top .9s ease;
   transition: top .9s ease;
+}
+
+.blocks-gallery-item__caption strong {
+  font-weight: 100;
+  color: gray;
 }
 
 .blocks-gallery-item {
@@ -483,10 +500,12 @@ h2.gradient-purple {
   height: 100%;
   position: relative;
   z-index: 100;
+  margin: auto;
 }
 
 .blocks-gallery-item figcaption {
   position: relative;
+  opacity: 0;
   overflow: hidden;
 }
 
@@ -511,6 +530,16 @@ h2.gradient-purple {
   /* Use pseudo elements to insert arrows inside of navigation buttons */
 }
 
+.landing textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
 .landing .columns-1 {
   background: green;
 }
@@ -531,9 +560,10 @@ h2.gradient-purple {
 
 .landing #carousel {
   overflow: hidden;
-  width: 90%;
+  width: 100%;
   margin: auto;
-  background: blue;
+  padding: 0px;
+  margin-bottom: 20px;
   position: relative;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -562,7 +592,6 @@ h2.gradient-purple {
   transition: transform 280ms ease-out 50ms;
   transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
   position: absolute;
-  background: red;
   z-index: 500;
 }
 
@@ -574,7 +603,6 @@ h2.gradient-purple {
   transition: transform 280ms ease-out 50ms;
   transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
   position: absolute;
-  background: red;
   z-index: 500;
 }
 
@@ -612,8 +640,8 @@ h2.gradient-purple {
   height: 10px;
   top: 50%;
   left: 54%;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
+  border-right: 2px solid #cf1918;
+  border-bottom: 2px solid #cf1918;
   -webkit-transform: translate(-50%, -50%) rotate(135deg);
           transform: translate(-50%, -50%) rotate(135deg);
 }
@@ -633,7 +661,7 @@ h2.gradient-purple {
 }
 
 .columns-3 li {
-  min-width: 33.3%;
+  min-width: 30%;
 }
 
 .columns-4 .blocks-gallery-item img {
@@ -772,7 +800,9 @@ h2.gradient-purple {
   transition: all 0.3s;
 }
 
-.btn, .btn-large, .btn-flat {
+.btn,
+.btn-large,
+.btn-flat {
   border: none;
   border-radius: 2px;
   display: inline-block;
@@ -828,10 +858,6 @@ button {
 }
 
 /* Flashing */
-.blocks-gallery-grid li {
-  min-width: 50%;
-}
-
 .blocks-gallery-item figure:hover img {
   opacity: 1;
   -webkit-animation: flash 1.5s;
@@ -894,7 +920,9 @@ button {
     min-height: 800px;
   }
   .blocks-gallery-grid li {
-    min-width: 33%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f3f3f3;
   }
   .pgindex .mainText div {
     display: -webkit-box;

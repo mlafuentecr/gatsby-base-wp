@@ -30,8 +30,13 @@ function handleChick(e) {
         // }
 
         // Carousel *********************************
+        if(document.getElementById('carousel')){
+
         const carousel = document.getElementById('carousel');
         var items = carousel.getElementsByClassName('blocks-gallery-item')
+
+
+        
         //.length
         for (var i = 0; i < items.length; i++) {
           items[i].classList.remove(`nextSlider`);
@@ -73,16 +78,7 @@ function handleChick(e) {
             
           }
 
-          // if (e.target.classList.contains('carousel__button--prev')) {
-          //   console.log(countSlider);
-          //   if(countSlider > 0){
-          //     countSlider =4; 
-          //     }else{
-          //       countSlider--
-          //   }
-          //   items[countSlider].classList.add(`prevSlider`);
-          // }
-        
+        }
 
 }
 

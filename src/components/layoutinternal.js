@@ -70,15 +70,13 @@ const {
 } = siteSetting
 
 
-    // //OPEN IMAGE ********************************* window.location.pathname
-    // if(e.target.dataset.fullUrl){
-    //   //window.open(e.target.dataset.fullUrl); 
-    //   document.getElementById("modalContent").innerHTML = `<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"> `
-      
-    // }
 
  
+let classPg = window.location.pathname
+classPg=classPg.replace(/[\/\\]/g,'');
 
+console.log(`siteSetting`);
+console.log(classPg);
 
 function handleChick1(e) {
   //OPEN IMAGE *********************************
@@ -95,7 +93,7 @@ function handleChick1(e) {
 
   return (
     <>
-      <div className={`pgInternal wrapper`}    onClick={handleChick1}>
+      <div className={`pgInternal wrapper ${classPg}` }    onClick={handleChick1}>
         <Header
           logoUrl={siteLogo.sourceUrl}
           logoAlt={siteLogo.altText}

@@ -14,7 +14,9 @@ const Header = props => {
           <div className="header-wrap clearfix">
             <div id="logo" className="logo">
               <Link to={`/`} className="logo ">
-                <img src={props.logoUrl} alt={props.logoAlt} />
+                
+                <img src={props.logoUrl} alt={props.logoAlt}  
+    width="100%" />
               </Link>
             </div>
 

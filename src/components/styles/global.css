@@ -988,16 +988,33 @@ h2.gradient-purple {
           justify-content: space-evenly;
 }
 
+.blocks-gallery-grid li {
+  background: red;
+  margin: 10px !important;
+  min-height: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .blocks-gallery-item__caption {
   width: 100%;
-  background: #ffffff;
-  padding: 5px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  padding: 10px;
   top: -70px;
   position: relative;
   -webkit-transition: top .9s ease;
   transition: top .9s ease;
+}
+
+.blocks-gallery-item__caption strong {
+  font-weight: 100;
+  color: gray;
 }
 
 .blocks-gallery-item {
@@ -1022,10 +1039,12 @@ h2.gradient-purple {
   height: 100%;
   position: relative;
   z-index: 100;
+  margin: auto;
 }
 
 .blocks-gallery-item figcaption {
   position: relative;
+  opacity: 0;
   overflow: hidden;
 }
 
@@ -1050,6 +1069,16 @@ h2.gradient-purple {
   /* Use pseudo elements to insert arrows inside of navigation buttons */
 }
 
+.landing textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
 .landing .columns-1 {
   background: green;
 }
@@ -1070,9 +1099,10 @@ h2.gradient-purple {
 
 .landing #carousel {
   overflow: hidden;
-  width: 90%;
+  width: 100%;
   margin: auto;
-  background: blue;
+  padding: 0px;
+  margin-bottom: 20px;
   position: relative;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -1101,7 +1131,6 @@ h2.gradient-purple {
   transition: transform 280ms ease-out 50ms;
   transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
   position: absolute;
-  background: red;
   z-index: 500;
 }
 
@@ -1113,7 +1142,6 @@ h2.gradient-purple {
   transition: transform 280ms ease-out 50ms;
   transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
   position: absolute;
-  background: red;
   z-index: 500;
 }
 
@@ -1151,8 +1179,8 @@ h2.gradient-purple {
   height: 10px;
   top: 50%;
   left: 54%;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
+  border-right: 2px solid #cf1918;
+  border-bottom: 2px solid #cf1918;
   -webkit-transform: translate(-50%, -50%) rotate(135deg);
           transform: translate(-50%, -50%) rotate(135deg);
 }
@@ -1172,7 +1200,7 @@ h2.gradient-purple {
 }
 
 .columns-3 li {
-  min-width: 33.3%;
+  min-width: 30%;
 }
 
 .columns-4 .blocks-gallery-item img {
@@ -1311,7 +1339,9 @@ h2.gradient-purple {
   transition: all 0.3s;
 }
 
-.btn, .btn-large, .btn-flat {
+.btn,
+.btn-large,
+.btn-flat {
   border: none;
   border-radius: 2px;
   display: inline-block;
@@ -1367,10 +1397,6 @@ button {
 }
 
 /* Flashing */
-.blocks-gallery-grid li {
-  min-width: 50%;
-}
-
 .blocks-gallery-item figure:hover img {
   opacity: 1;
   -webkit-animation: flash 1.5s;
@@ -1433,7 +1459,9 @@ button {
     min-height: 800px;
   }
   .blocks-gallery-grid li {
-    min-width: 33%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f3f3f3;
   }
   .pgindex .mainText div {
     display: -webkit-box;
@@ -1605,7 +1633,9 @@ html {
   height: 100%;
 }
 
-#___gatsby, #gatsby-focus-wrapper, .wrapper {
+#___gatsby,
+#gatsby-focus-wrapper,
+.wrapper {
   height: 100%;
 }
 
@@ -1639,7 +1669,6 @@ body {
 
 .gallery h2 {
   color: white;
-  background: #8a8a8a;
   padding: 10px;
   text-transform: uppercase;
   font-weight: 500;
@@ -1758,15 +1787,48 @@ main {
           box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.07);
 }
 
+.gallery .wrap {
+  background-color: #f6f6f6;
+  height: 100%;
+  background-attachment: fixed;
+  background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #161616;
+  background-color: #f6f6f6;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
 /*<!--=============== Landing  ===============-->*/
-.landing {
+.landing main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.landing .blocks-gallery-item {
-  background: purple;
+.landing main #formbasic form fieldset {
+  width: 100%;
+}
+
+.landing main #formbasic form fieldset div {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.landing main .wrap {
+  background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
+  background-color: #4683ff;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-blend-mode: luminosity;
+}
+
+.landing main .blocks-gallery-item {
   height: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1780,12 +1842,24 @@ main {
   overflow: inherit;
 }
 
-.landing .content {
-  width: 100%;
-  padding: 10px;
+.landing main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  background: white;
+  margin: 10px 0px;
+  border-radius: 15px;
+  padding: 20px;
+  min-height: 750px;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-box-shadow 0.25s ease 0s, -webkit-transform 0.25s ease 0s, -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  transition: opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-box-shadow 0.25s ease 0s, -webkit-transform 0.25s ease 0s, -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-box-shadow 0.25s ease 0s, -webkit-transform 0.25s ease 0s, -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
 }
 
-.landing .container {
+.landing main .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1793,13 +1867,24 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 10px;
 }
 
-.landing #formbasic {
-  width: 100%;
+.landing main #formbasic {
+  min-width: 300px;
+  border-radius: 15px;
+  background: #e8e7e7;
+  min-height: 750px;
+  padding: 15px;
+  -webkit-box-shadow: inset 19px 0px 21px -7px rgba(0, 0, 0, 0.33);
+  box-shadow: inset 19px 0px 21px -7px rgba(0, 0, 0, 0.33);
+  -webkit-transition: opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-box-shadow 0.25s ease 0s, -webkit-transform 0.25s ease 0s, -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  transition: opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-box-shadow 0.25s ease 0s, -webkit-transform 0.25s ease 0s, -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-box-shadow 0.25s ease 0s, -webkit-transform 0.25s ease 0s, -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
 }
 
-.landing #formbasic div {
+.landing main #formbasic div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1811,7 +1896,11 @@ main {
       flex-wrap: wrap;
 }
 
-.landing #formbasic form {
+.landing main #formbasic div input {
+  border-bottom: 1px solid #cf1918;
+}
+
+.landing main #formbasic form {
   padding: 0px;
   margin: 0px;
   max-width: 100%;
@@ -1819,9 +1908,14 @@ main {
   -webkit-box-shadow: initial;
           box-shadow: initial;
   border-top-width: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.landing #formbasic form label {
+.landing main #formbasic form label {
   margin-right: 20px;
 }
 
@@ -1829,29 +1923,57 @@ main {
 /*<!--=============== IOS DEVICES ===============-->*/
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
 @media only screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  .header-wrap {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
   /*<!--=============== Landing  ===============-->*/
-  .landing {
-    margin-top: 30px;
-  }
-  .landing .blocks-gallery-item {
+  .landing main .blocks-gallery-item {
     height: 400px;
-    background: yellow;
   }
-  .landing .content {
-    width: 70%;
+  .landing main .blocks-gallery-item figure {
+    height: 100%;
   }
-  .landing .container {
+  .landing main .blocks-gallery-item img {
+    display: block;
+    position: relative;
+    z-index: 100;
+    max-height: -webkit-fill-available;
+    width: auto;
+  }
+  .landing main .btn, .landing main .btn-large, .landing main .btn-flat {
+    margin: 5px;
+  }
+  .landing main .content {
+    margin: 15px;
+  }
+  .landing main .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: 100%;
   }
-  .landing #formbasic {
-    width: 30%;
-    background: #efefef;
+  .landing main input {
+    margin: 0px !important;
+  }
+  .landing main #formbasic {
     padding: 15px;
   }
-  .landing #formbasic div {
+  .landing main #formbasic h3 {
+    font-size: 32px;
+    color: #3c3c3c;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    line-height: initial !important;
+  }
+  .landing main #formbasic div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1861,9 +1983,7 @@ main {
             flex-direction: row;
     -ms-flex-wrap: initial;
         flex-wrap: initial;
-  }
-  .container {
-    width: 768px;
+    margin: 0px;
   }
   .footer .container {
     -webkit-box-orient: horizontal;
@@ -1882,6 +2002,9 @@ main {
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
 @media only screen and (min-width: 1140px) {
   .container {
+    width: 1140px;
+  }
+  .landing main .mainText {
     width: 1140px;
   }
 }

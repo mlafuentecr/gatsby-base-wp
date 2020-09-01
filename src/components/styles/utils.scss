@@ -13,9 +13,10 @@ h1 {
 h2 {
     color: $principalColor;
 }
+
 h2.gradient-red {
     color: #bc202e;
-   // background: linear-gradient(45deg, #e7af0f 10%, #d80000 90%);
+    // background: linear-gradient(45deg, #e7af0f 10%, #d80000 90%);
     // -webkit-background-clip: text;
     // -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -25,7 +26,8 @@ h2.gradient-red {
     line-height: initial !important;
     font-size: 50px !important;
 }
-h2.gradient-blue  {
+
+h2.gradient-blue {
     background: linear-gradient(25deg, #1d8cff 0%, #30cfd0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -51,15 +53,14 @@ h2.gradient-purple {
 }
 
 .pgindex {
-    .awssld__wrapper{
-        img{
+    .awssld__wrapper {
+        img {
             width: 100%;
         }
     }
     img {
         max-width: initial;
     }
-
     h1 {
         font-size: 40px;
         line-height: 45px;
@@ -96,22 +97,19 @@ h2.gradient-purple {
 }
 
 .pgindex {
-
     .mainText {
         div {
             display: flex;
             flex-wrap: wrap;
         }
     }
-
     .boxes2 {
         div {
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
             justify-content: center;
-             align-items: center;
-            
+            align-items: center;
         }
     }
 }
@@ -322,41 +320,48 @@ $curveWidth: 200%;
 
 
 /* Gray Scale */
+
 .gray figure img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
+
 .gray figure:hover img {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
+
 
 /* Zoom Out #2 */
-.hover04  img {
-	width: 400px;
-	height: auto;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.hover04:hover img {
-	width: 300px;
+
+.hover04 img {
+    width: 400px;
+    height: auto;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
+.hover04:hover img {
+    width: 300px;
+}
+
+
 /* Rotate */
+
 .hover06 img {
     -webkit-transform: rotate(0) scale(1);
     transform: rotate(0) scale(1);
-    
-
 }
+
 .hover06:hover img {
     -webkit-transform: rotate(15deg) scale(1.4);
-	transform: rotate(15deg) scale(1.4);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+    transform: rotate(15deg) scale(1.4);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
+
 
 /*<!--=============== Gallery  ===============-->*/
 
@@ -366,18 +371,29 @@ $curveWidth: 200%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
+li{
+    background: red;
+    margin: 10px!important;
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 }
 
 .blocks-gallery-item__caption {
     width: 100%;
-    background: #ffffff;
-    padding: 5px;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    padding: 10px;
     top: -70px;
     position: relative;
     transition: top .9s ease;
+  
+    strong {
+        font-weight: 100;
+        color: gray;
+    }
 }
 
 .blocks-gallery-item {
@@ -392,12 +408,15 @@ $curveWidth: 200%;
         height: 100%;
         position: relative;
         z-index: 100;
+        margin: auto;
     }
     figcaption {
         position: relative;
-        //opacity: 0;
+         opacity: 0;
         overflow: hidden;
     }
+ 
+
     &:hover {
         figcaption {
             opacity: 1;
@@ -413,108 +432,101 @@ $curveWidth: 200%;
     max-width: initial;
 }
 
-.landing{
-    .columns-1{
-background: green;
+.landing {
+
+    textarea {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 10px;
+      }
+
+
+    .columns-1 {
+        background: green;
     }
     .blocks-gallery-grid li {
         min-width: 100%;
     }
-
-
-                    
-                /*<!--=============== carousel  ===============-->*/
-
-                /* Translate previous item to the left */
-                .carousel__photo.prev {
-                    transform: translateX(-100%);
-                }
-                
-                /* Translate next item to the right */
-                .carousel__photo.next {
-                    transform: translateX(100%);
-                }
-                
-                    #carousel{
-                        overflow: hidden;
-                        width: 90%;
-                        margin: auto;
-                        background: blue;
-                        position: relative;
-                        transform-style: preserve-3d;
-                    }
-
-                    ul.blocks-gallery-grid {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: nowrap;
-                        justify-content: end;
-                    }
-                    .nextSlider {
-                        transform: translateX(0px);
-                        transition: transform 280ms ease-out 50ms; 
-                        position: absolute;
-                        background: red;
-                        z-index: 500;
-                    }
-                    .prevSlider {
-                        transform: translateX(0px);
-                        transition: transform 280ms ease-out 50ms; 
-                        position: absolute;
-                        background: red;
-                        z-index: 500;
-                    }
-                  
-/* Style navigation buttons to sit in the middle, either side of the carousel. */
-.carousel__button--prev,
-.carousel__button--next {
-  position: absolute;
-  top:50%;
-  width: 3rem;
-  height: 3rem;
-  background-color: #FFF;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  cursor: pointer; 
-  z-index: 1001; /* Sit on top of everything */
-  border:1px solid black;
-/*  opacity: 0;  Hide buttons until carousel is initialised 
+    /*<!--=============== carousel  ===============-->*/
+    /* Translate previous item to the left */
+    .carousel__photo.prev {
+        transform: translateX(-100%);
+    }
+    /* Translate next item to the right */
+    .carousel__photo.next {
+        transform: translateX(100%);
+    }
+    #carousel {
+        overflow: hidden;
+        width: 100%;
+        margin: auto;
+        padding: 0px;
+        margin-bottom: 20px;
+        position: relative;
+        transform-style: preserve-3d;
+    }
+    ul.blocks-gallery-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: end;
+    }
+    .nextSlider {
+        transform: translateX(0px);
+        transition: transform 280ms ease-out 50ms;
+        position: absolute;
+        z-index: 500;
+    }
+    .prevSlider {
+        transform: translateX(0px);
+        transition: transform 280ms ease-out 50ms;
+        position: absolute;
+        z-index: 500;
+    }
+    /* Style navigation buttons to sit in the middle, either side of the carousel. */
+    .carousel__button--prev,
+    .carousel__button--next {
+        position: absolute;
+        top: 50%;
+        width: 3rem;
+        height: 3rem;
+        background-color: #FFF;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1001;
+        /* Sit on top of everything */
+        border: 1px solid black;
+        /*  opacity: 0;  Hide buttons until carousel is initialised 
   transition:opacity 1s;*/
+    }
+    .carousel__button--prev {
+        left: 0;
+    }
+    .carousel__button--next {
+        right: 0;
+    }
+    /* Use pseudo elements to insert arrows inside of navigation buttons */
+    .carousel__button--prev::after,
+    .carousel__button--next::after {
+        content: " ";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        left: 54%;
+        border-right: 2px solid $menuColor;
+        border-bottom: 2px solid $menuColor;
+        transform: translate(-50%, -50%) rotate(135deg);
+    }
+    .carousel__button--next::after {
+        left: 47%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
 }
-
-.carousel__button--prev {
-  left:0;
-}
-
-.carousel__button--next {
-  right:0;
-}
-
-/* Use pseudo elements to insert arrows inside of navigation buttons */
-.carousel__button--prev::after,
-.carousel__button--next::after {
-  content: " ";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  left: 54%;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  transform: translate(-50%, -50%) rotate(135deg);
-}
-
-.carousel__button--next::after {
-  left: 47%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
- 
-}
-
-
-
-
-
 
 .columns-1 {
     li {
@@ -530,7 +542,7 @@ background: green;
 
 .columns-3 {
     li {
-        min-width: 33.3%;
+        min-width: 30%;
     }
 }
 
@@ -575,7 +587,6 @@ background: green;
     max-width: 800px;
     width: 100%;
     margin: auto;
-
     div {
         display: flex;
         flex-direction: column;
@@ -602,9 +613,9 @@ background: green;
         border-color: $menuHover;
         border-top-width: 5px;
         padding: 20px;
-    width: 90%;
-    max-width: 800px;
-    margin: 10%;
+        width: 90%;
+        max-width: 800px;
+        margin: 10%;
         fieldset {
             border: none;
         }
@@ -613,7 +624,7 @@ background: green;
             font-family: "Roboto", sans-serif;
             font-weight: normal;
             min-width: 20%;
-            color:gray;
+            color: gray;
         }
         textarea#message {
             min-height: 150px;
@@ -649,7 +660,9 @@ background: green;
     }
 }
 
-.btn, .btn-large, .btn-flat {
+.btn,
+.btn-large,
+.btn-flat {
     border: none;
     border-radius: 2px;
     display: inline-block;
@@ -661,7 +674,8 @@ background: green;
     -webkit-tap-highlight-color: transparent;
     margin: 20px;
 }
-.send{
+
+.send {
     text-decoration: none;
     color: #fff;
     background-color: $principalColor;
@@ -670,6 +684,7 @@ background: green;
     transition: .2s ease-out;
     cursor: pointer;
 }
+
 button {
     appearance: button;
     -webkit-writing-mode: horizontal-tb !important;
@@ -695,10 +710,11 @@ button {
     border-image: initial;
 }
 
+
 /* Flashing */
-.blocks-gallery-grid li {
-    min-width: 50%;
-}
+
+
+
 .blocks-gallery-item figure:hover img {
     opacity: 1;
     -webkit-animation: flash 1.5s;
@@ -744,8 +760,8 @@ button {
     #formbasic {
         div {
             flex-direction: row;
-        }}
-
+        }
+    }
     .pgindex {
         h1 {
             font-size: auto;
@@ -770,60 +786,52 @@ button {
             color: #504e4e;
             line-height: 34px;
             letter-spacing: 0.5px;
-       
         }
-
         .section {
             min-height: 800px;
         }
-
     }
-   
-
     .blocks-gallery-grid li {
-        min-width: 33%;
+      
+        margin: 0px;
+        padding: 0px;
+        background-color: #f3f3f3;
     }
     .pgindex {
-      
         .mainText {
             div {
                 display: flex;
                 flex-wrap: wrap;
             }
         }
-    
         .boxes2 {
             div {
                 display: flex;
                 flex-wrap: wrap;
                 flex-direction: row;
                 justify-content: left;
-                 align-items: center;
-                
+                align-items: center;
             }
         }
     }
-    .box{
-        img{
+    .box {
+        img {
             width: 70%;
-    height: auto;
+            height: auto;
         }
     }
-
     .boxes4 div {
         display: flex;
         .box {
             width: 25%;
         }
     }
-
     .boxes2 div {
         display: flex;
         .box {
             width: 50%;
-        }}
-
-
+        }
+    }
 }
 
 
