@@ -595,6 +595,29 @@ h2.gradient-purple {
   font-size: 50px !important;
 }
 
+.close {
+  background: white;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: solid 3px black;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  font-weight: 500;
+  font-size: 30px;
+}
+
 .pgindex .awssld__wrapper img {
   width: 100%;
 }
@@ -1061,14 +1084,6 @@ h2.gradient-purple {
   max-width: initial;
 }
 
-.landing {
-  /*<!--=============== carousel  ===============-->*/
-  /* Translate previous item to the left */
-  /* Translate next item to the right */
-  /* Style navigation buttons to sit in the middle, either side of the carousel. */
-  /* Use pseudo elements to insert arrows inside of navigation buttons */
-}
-
 .landing textarea {
   width: 100%;
   border: 1px solid #ccc;
@@ -1085,110 +1100,6 @@ h2.gradient-purple {
 
 .landing .blocks-gallery-grid li {
   min-width: 100%;
-}
-
-.landing .carousel__photo.prev {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-.landing .carousel__photo.next {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-}
-
-.landing #carousel {
-  overflow: hidden;
-  width: 100%;
-  margin: auto;
-  padding: 0px;
-  margin-bottom: 20px;
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-.landing ul.blocks-gallery-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-}
-
-.landing .nextSlider {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-  -webkit-transition: -webkit-transform 280ms ease-out 50ms;
-  transition: -webkit-transform 280ms ease-out 50ms;
-  transition: transform 280ms ease-out 50ms;
-  transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
-  position: absolute;
-  z-index: 500;
-}
-
-.landing .prevSlider {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-  -webkit-transition: -webkit-transform 280ms ease-out 50ms;
-  transition: -webkit-transform 280ms ease-out 50ms;
-  transition: transform 280ms ease-out 50ms;
-  transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
-  position: absolute;
-  z-index: 500;
-}
-
-.landing .carousel__button--prev,
-.landing .carousel__button--next {
-  position: absolute;
-  top: 50%;
-  width: 3rem;
-  height: 3rem;
-  background-color: #FFF;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 1001;
-  /* Sit on top of everything */
-  border: 1px solid black;
-  /*  opacity: 0;  Hide buttons until carousel is initialised 
-  transition:opacity 1s;*/
-}
-
-.landing .carousel__button--prev {
-  left: 0;
-}
-
-.landing .carousel__button--next {
-  right: 0;
-}
-
-.landing .carousel__button--prev::after,
-.landing .carousel__button--next::after {
-  content: " ";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  left: 54%;
-  border-right: 2px solid #cf1918;
-  border-bottom: 2px solid #cf1918;
-  -webkit-transform: translate(-50%, -50%) rotate(135deg);
-          transform: translate(-50%, -50%) rotate(135deg);
-}
-
-.landing .carousel__button--next::after {
-  left: 47%;
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .columns-1 li {
@@ -1208,7 +1119,11 @@ h2.gradient-purple {
 }
 
 .columns-4 li {
-  min-width: 25%;
+  min-width: 23%;
+}
+
+.post .columns-4 li {
+  min-height: auto;
 }
 
 .columns-5 .blocks-gallery-item img {
@@ -1277,18 +1192,6 @@ h2.gradient-purple {
   margin: 0px;
   padding: 0px;
   font-size: 5vw;
-}
-
-#formbasic form {
-  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  border-top-style: solid;
-  border-color: #fdeae9;
-  border-top-width: 5px;
-  padding: 20px;
-  width: 90%;
-  max-width: 800px;
-  margin: 10%;
 }
 
 #formbasic form fieldset {
@@ -1419,6 +1322,115 @@ button {
   100% {
     opacity: 1;
   }
+}
+
+/*<!--=============== carousel  ===============-->*/
+/* Translate previous item to the left */
+.carousel__photo.prev {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+/* Translate next item to the right */
+.carousel__photo.next {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+#carousel {
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  padding: 0px;
+  margin-bottom: 20px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+ul.blocks-gallery-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.nextSlider {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: -webkit-transform 280ms ease-out 50ms;
+  transition: -webkit-transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
+  position: absolute;
+  z-index: 500;
+}
+
+.prevSlider {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: -webkit-transform 280ms ease-out 50ms;
+  transition: -webkit-transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
+  position: absolute;
+  z-index: 500;
+}
+
+/* Style navigation buttons to sit in the middle, either side of the carousel. */
+.carousel__button--prev,
+.carousel__button--next {
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #FFF;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  /* Sit on top of everything */
+  border: 1px solid black;
+  /*  opacity: 0;  Hide buttons until carousel is initialised 
+  transition:opacity 1s;*/
+}
+
+.carousel__button--prev {
+  left: 0;
+}
+
+.carousel__button--next {
+  right: 0;
+}
+
+/* Use pseudo elements to insert arrows inside of navigation buttons */
+.carousel__button--prev::after,
+.carousel__button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid #cf1918;
+  border-bottom: 2px solid #cf1918;
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel__button--next::after {
+  left: 47%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
@@ -1689,6 +1701,10 @@ body {
   text-align: center;
 }
 
+.footer .usaPhone:hover {
+  background-color: #E70F0F;
+}
+
 .footer .logo img {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
@@ -1722,19 +1738,34 @@ body {
 
 .footer .social-wrap ul {
   list-style-type: none;
-  color: white;
+  margin-top: 0px;
+  max-height: 80px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 0px;
-  margin-top: 50px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer .social-wrap li {
   font-size: 22px;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.footer .social-wrap li:hover {
+  font-size: 52px;
+  position: relative;
 }
 
 .footer .social-wrap a {
@@ -1788,18 +1819,202 @@ main {
 }
 
 .gallery .wrap {
-  background-color: #f6f6f6;
   height: 100%;
   background-attachment: fixed;
   background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
-  background-position: center top;
-  background-repeat: no-repeat;
   background-color: #161616;
-  background-color: #f6f6f6;
-  height: 100%;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+}
+
+/*<!--=============== Post  ===============-->*/
+.post .react-reveal {
+  background: #0000001f;
+  padding: 10px;
+  border: 1px solid #353535;
+}
+
+.post .wrap {
+  height: 100%;
+  background-attachment: fixed;
+  background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
+  background-color: #161616;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.post h2 {
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 20px;
+  background: #00000042;
+  margin: 10px 0px;
+}
+
+.post .wp-block-media-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.post .wp-block-media-text__content {
+  margin: 0px 20px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: self-start;
+      -ms-flex-align: self-start;
+          align-items: self-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 30px;
+  color: white;
+  background: #00000042;
+}
+
+.post .blocks-gallery-grid li {
+  background-color: #000000;
+}
+
+.post .wp-block-media-text__media {
+  width: 70%;
+  height: auto;
+}
+
+.post .wp-block-media-text__media img {
+  height: auto;
+}
+
+#carousel .columns-1 li, #carousel .columns-2 li, #carousel .columns-3 li, #carousel .columns-4 li {
+  min-width: 100%;
+  background: black;
+  height: 100%;
+}
+
+/*<!--=============== Post  ===============-->*/
+.landingPg .content {
+  max-width: 70%;
+  background: red;
+  padding: 10px;
+}
+
+.landingPg .ladingwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.landingPg #formbasic {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  height: 100%;
+  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+.landingPg .react-reveal {
+  background: #0000001f;
+  padding: 10px;
+  border: 1px solid #353535;
+}
+
+.landingPg .wrap {
+  height: 100%;
+  background-attachment: fixed;
+  background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
+  background-color: #161616;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.landingPg h2 {
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 20px;
+  background: #00000042;
+  margin: 10px 0px;
+}
+
+.landingPg .wp-block-media-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.landingPg .wp-block-media-text__content {
+  margin: 0px 20px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: self-start;
+      -ms-flex-align: self-start;
+          align-items: self-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 30px;
+  color: white;
+  background: #00000042;
+}
+
+.landingPg .blocks-gallery-grid li {
+  background-color: #000000;
+}
+
+.landingPg .wp-block-media-text__media {
+  width: 70%;
+  height: auto;
+}
+
+.landingPg .wp-block-media-text__media img {
+  height: auto;
 }
 
 /*<!--=============== Landing  ===============-->*/
@@ -1871,10 +2086,8 @@ main {
 }
 
 .landing main #formbasic {
-  min-width: 300px;
   border-radius: 15px;
   background: #e8e7e7;
-  min-height: 750px;
   padding: 15px;
   -webkit-box-shadow: inset 19px 0px 21px -7px rgba(0, 0, 0, 0.33);
   box-shadow: inset 19px 0px 21px -7px rgba(0, 0, 0, 0.33);
@@ -1898,21 +2111,6 @@ main {
 
 .landing main #formbasic div input {
   border-bottom: 1px solid #cf1918;
-}
-
-.landing main #formbasic form {
-  padding: 0px;
-  margin: 0px;
-  max-width: 100%;
-  width: 100%;
-  -webkit-box-shadow: initial;
-          box-shadow: initial;
-  border-top-width: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .landing main #formbasic form label {
@@ -1945,7 +2143,9 @@ main {
     max-height: -webkit-fill-available;
     width: auto;
   }
-  .landing main .btn, .landing main .btn-large, .landing main .btn-flat {
+  .landing main .btn,
+  .landing main .btn-large,
+  .landing main .btn-flat {
     margin: 5px;
   }
   .landing main .content {

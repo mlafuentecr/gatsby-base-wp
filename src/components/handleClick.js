@@ -36,7 +36,7 @@ function handleChick(e) {
         var items = carousel.getElementsByClassName('blocks-gallery-item')
 
 
-        
+
         //.length
         for (var i = 0; i < items.length; i++) {
           items[i].classList.remove(`nextSlider`);
@@ -44,9 +44,7 @@ function handleChick(e) {
         }
 
 
-      //   delay(function(){
-      //     console.log(`5 s`);
-      // }, 5000 ); // end delay
+
 
         //nextSlider
         if (e.target.classList.contains('carousel__button--next')) {

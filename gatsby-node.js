@@ -3,24 +3,25 @@ exports.createPages = async ({ graphql, actions }) => {
 
   //por cada pagina y post WP_
   const result = await graphql(`
-    {
-      WP_1 {
-        pages(first: 800) {
-          nodes {
-            title(format: RENDERED)
-            slug
-            content(format: RENDERED)
-          }
+  {
+    WP_1 {
+      pages(first: 800) {
+        nodes {
+          title(format: RENDERED)
+          slug
+          content(format: RENDERED)
         }
-        posts(first: 800) {
-          nodes {
-            title(format: RENDERED)
-            slug
-            content(format: RENDERED)
-          }
+      }
+      posts(first: 800) {
+        nodes {
+          title(format: RENDERED)
+          slug
+          content(format: RENDERED)
+          excerpt
         }
       }
     }
+  }
   `)
 
   result.data.WP_1.pages.nodes.forEach(function (node) {
@@ -60,6 +61,7 @@ exports.createPages = async ({ graphql, actions }) => {
         id: node.id,
         title: node.title,
         content: node.content,
+        excerpt: node.excerpt,
       },
     })
   })

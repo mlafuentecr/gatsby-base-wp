@@ -7,7 +7,7 @@ import Modal, {closeStyle} from 'simple-react-modal'
 
 import handleChick from './handleClick'
 
-const LayoutIndex = ({ children }) => {
+const LayoutIndex = (props) => {
 const [showModal, setShowModal] = useState(false); 
 const [modalContent, setModalContent] = useState(''); 
 
@@ -78,23 +78,22 @@ function handleChick1(e) {
   //OPEN IMAGE *********************************
     if(e.target.dataset.fullUrl){
       setShowModal(true)
-      setModalContent(`<image width="800px" src="${e.target.dataset.fullUrl}"/>`)
+      setModalContent(`<image  src="${e.target.dataset.fullUrl}"/>`)
     }else{
    //Check real Click
    handleChick(e)
     }
-    
- 
 }
+
 
   return (
     <>
-      <div className={`pgInternal wrapper landing`}    onClick={handleChick1}>
+      <div className={`pgInternal wrapper ${props.nameType}`}    onClick={handleChick1}>
         <Header
           logoUrl={siteLogo.sourceUrl}
           logoAlt={siteLogo.altText}
         />
-        <main >{children}</main>
+        <main >{props.children}</main>
 
         <Modal show={showModal}  containerStyle={{ maxWidth:"800px" , width:"80%"}} >
           <div className="close" onClick={()=>setShowModal(false)}>X</div>

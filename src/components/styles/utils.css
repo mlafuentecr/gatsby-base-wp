@@ -56,6 +56,29 @@ h2.gradient-purple {
   font-size: 50px !important;
 }
 
+.close {
+  background: white;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: solid 3px black;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  font-weight: 500;
+  font-size: 30px;
+}
+
 .pgindex .awssld__wrapper img {
   width: 100%;
 }
@@ -522,14 +545,6 @@ h2.gradient-purple {
   max-width: initial;
 }
 
-.landing {
-  /*<!--=============== carousel  ===============-->*/
-  /* Translate previous item to the left */
-  /* Translate next item to the right */
-  /* Style navigation buttons to sit in the middle, either side of the carousel. */
-  /* Use pseudo elements to insert arrows inside of navigation buttons */
-}
-
 .landing textarea {
   width: 100%;
   border: 1px solid #ccc;
@@ -546,110 +561,6 @@ h2.gradient-purple {
 
 .landing .blocks-gallery-grid li {
   min-width: 100%;
-}
-
-.landing .carousel__photo.prev {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-.landing .carousel__photo.next {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-}
-
-.landing #carousel {
-  overflow: hidden;
-  width: 100%;
-  margin: auto;
-  padding: 0px;
-  margin-bottom: 20px;
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-.landing ul.blocks-gallery-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-}
-
-.landing .nextSlider {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-  -webkit-transition: -webkit-transform 280ms ease-out 50ms;
-  transition: -webkit-transform 280ms ease-out 50ms;
-  transition: transform 280ms ease-out 50ms;
-  transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
-  position: absolute;
-  z-index: 500;
-}
-
-.landing .prevSlider {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-  -webkit-transition: -webkit-transform 280ms ease-out 50ms;
-  transition: -webkit-transform 280ms ease-out 50ms;
-  transition: transform 280ms ease-out 50ms;
-  transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
-  position: absolute;
-  z-index: 500;
-}
-
-.landing .carousel__button--prev,
-.landing .carousel__button--next {
-  position: absolute;
-  top: 50%;
-  width: 3rem;
-  height: 3rem;
-  background-color: #FFF;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 1001;
-  /* Sit on top of everything */
-  border: 1px solid black;
-  /*  opacity: 0;  Hide buttons until carousel is initialised 
-  transition:opacity 1s;*/
-}
-
-.landing .carousel__button--prev {
-  left: 0;
-}
-
-.landing .carousel__button--next {
-  right: 0;
-}
-
-.landing .carousel__button--prev::after,
-.landing .carousel__button--next::after {
-  content: " ";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  left: 54%;
-  border-right: 2px solid #cf1918;
-  border-bottom: 2px solid #cf1918;
-  -webkit-transform: translate(-50%, -50%) rotate(135deg);
-          transform: translate(-50%, -50%) rotate(135deg);
-}
-
-.landing .carousel__button--next::after {
-  left: 47%;
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .columns-1 li {
@@ -669,7 +580,11 @@ h2.gradient-purple {
 }
 
 .columns-4 li {
-  min-width: 25%;
+  min-width: 23%;
+}
+
+.post .columns-4 li {
+  min-height: auto;
 }
 
 .columns-5 .blocks-gallery-item img {
@@ -738,18 +653,6 @@ h2.gradient-purple {
   margin: 0px;
   padding: 0px;
   font-size: 5vw;
-}
-
-#formbasic form {
-  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  border-top-style: solid;
-  border-color: #fdeae9;
-  border-top-width: 5px;
-  padding: 20px;
-  width: 90%;
-  max-width: 800px;
-  margin: 10%;
 }
 
 #formbasic form fieldset {
@@ -880,6 +783,115 @@ button {
   100% {
     opacity: 1;
   }
+}
+
+/*<!--=============== carousel  ===============-->*/
+/* Translate previous item to the left */
+.carousel__photo.prev {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+/* Translate next item to the right */
+.carousel__photo.next {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+#carousel {
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  padding: 0px;
+  margin-bottom: 20px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+ul.blocks-gallery-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.nextSlider {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: -webkit-transform 280ms ease-out 50ms;
+  transition: -webkit-transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
+  position: absolute;
+  z-index: 500;
+}
+
+.prevSlider {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: -webkit-transform 280ms ease-out 50ms;
+  transition: -webkit-transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
+  position: absolute;
+  z-index: 500;
+}
+
+/* Style navigation buttons to sit in the middle, either side of the carousel. */
+.carousel__button--prev,
+.carousel__button--next {
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #FFF;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  /* Sit on top of everything */
+  border: 1px solid black;
+  /*  opacity: 0;  Hide buttons until carousel is initialised 
+  transition:opacity 1s;*/
+}
+
+.carousel__button--prev {
+  left: 0;
+}
+
+.carousel__button--next {
+  right: 0;
+}
+
+/* Use pseudo elements to insert arrows inside of navigation buttons */
+.carousel__button--prev::after,
+.carousel__button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid #cf1918;
+  border-bottom: 2px solid #cf1918;
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel__button--next::after {
+  left: 47%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
