@@ -145,7 +145,13 @@ main {
 
 .pgInternal {
     #header {
+        .logo{
+            height: 100%;
+        }
         box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.07);
+    }
+    .container{
+        margin: 0px auto!important;
     }
 }
 
@@ -217,7 +223,7 @@ main {
 
 #carousel {
    
-    .columns-1 li,.columns-2 li,.columns-3 li,.columns-4 li,  {
+    .columns-1 li,.columns-2 li,.columns-3 li,.columns-4 li {
         min-width: 100%;
         background: black;
         height: 100%;
@@ -225,31 +231,53 @@ main {
 }
 
 
-/*<!--=============== Post  ===============-->*/
+/*<!--=============== landingPg  ===============-->*/
 
 .landingPg {
     .content {
-        max-width: 70%;
-        background: red;
         padding: 10px;
+        background: white;
+        
     }
     .ladingwrapper {
         display: flex;
         justify-content: space-evenly;
         align-content: flex-start;
+        flex-direction: column;
     }
     #formbasic {
-        width: 30%;
         display: flex;
         justify-self: center;
         align-items: center;
         flex-direction: row;
         max-width: 800px;
-        margin: auto;
-        background: white;
-        height: 100%;
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+        background: #e8e8e8;
         padding: 20px;
+   
+
+        -webkit-box-shadow: inset 0px 25px 23px -10px rgba(0,0,0,0.38);
+-moz-box-shadow: inset 0px 25px 23px -10px rgba(0,0,0,0.38);
+box-shadow: inset 0px 25px 23px -10px rgba(0,0,0,0.38);
+
+
+
+        form{
+            padding: 20px;
+            label {
+                margin-right: 20px;
+            }
+            h3{
+                text-align: center;
+            }
+            flex: 1;
+            fieldset{
+                width: 100%;
+            div{
+                width: 100%;
+            }
+        }
+        }
+   
     }
     .react-reveal {
         background: #0000001f;
@@ -261,9 +289,15 @@ main {
         background-attachment: fixed;
         background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
         background-color: #161616;
+        background-color: #4683ff;
+        background-blend-mode: luminosity;
         background-repeat: no-repeat;
         background-position: top center;
         background-size: cover;
+    }
+    .mainText{
+        padding: 0px;
+        margin:0px; 
     }
     h2 {
         text-transform: uppercase;
@@ -302,73 +336,6 @@ main {
 }
 
 
-/*<!--=============== Landing  ===============-->*/
-
-.landing {
-    main {
-        display: flex;
-        #formbasic form fieldset {
-            width: 100%;
-            div {
-                flex-wrap: wrap;
-            }
-        }
-        .wrap {
-            background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
-            background-color: #4683ff;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-position: top center;
-            background-size: cover;
-            background-blend-mode: luminosity;
-        }
-        .blocks-gallery-item {
-            height: 250px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: inherit;
-        }
-        .content {
-            display: flex;
-            flex-flow: wrap;
-            background: white;
-            margin: 10px 0px;
-            border-radius: 15px;
-            padding: 20px;
-            min-height: 750px;
-            transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-        }
-        #formbasic {
-            border-radius: 15px;
-            background: #e8e7e7;
-            padding: 15px;
-            -webkit-box-shadow: inset 19px 0px 21px -7px rgba(0, 0, 0, 0.33);
-            -moz-box-shadow: inset 19px 0px 21px -7px rgba(0, 0, 0, 0.33);
-            box-shadow: inset 19px 0px 21px -7px rgba(0, 0, 0, 0.33);
-            transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-            div {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                input {
-                    border-bottom: 1px solid $menuColor;
-                }
-            }
-            form {
-                label {
-                    margin-right: 20px;
-                }
-            }
-        }
-    }
-}
-
 
 /*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
 
@@ -393,6 +360,33 @@ main {
     .header-wrap {
         flex: 1;
     }
+
+
+
+    /*<!--=============== landingPg  ===============-->*/
+
+.landingPg {
+
+
+    .ladingwrapper{
+        flex-direction:row;
+    }
+    #formbasic {
+        margin: 0px 10px;
+        align-items: self-start;
+        -webkit-box-shadow: inset 33px 0px 23px -10px rgba(0,0,0,0.38);
+        -moz-box-shadow: inset 33px 0px 23px -10px rgba(0,0,0,0.38);
+        box-shadow: inset 33px 0px 23px -10px rgba(0,0,0,0.38);
+
+        div{
+            flex-direction: column;
+        }
+    }
+    .container{
+        width: 100%;
+    }
+ 
+}
     /*<!--=============== Landing  ===============-->*/
     .landing {
         main {
@@ -425,6 +419,11 @@ main {
                 margin: 0px!important;
             }
             #formbasic {
+                background: #e8e8e8; 
+        -webkit-box-shadow: inset 24px 0px 23px -10px rgba(0,0,0,0.38);
+        -moz-box-shadow: inset 24px 0px 23px -10px rgba(0,0,0,0.38);
+        box-shadow: inset 24px 0px 23px -10px rgba(0,0,0,0.38);
+
                 h3 {
                     font-size: 32px;
                     color: #3c3c3c;
@@ -464,13 +463,27 @@ main {
     .container {
         width: $laptop;
     }
-    .landing {
-        main {
-            .mainText {
-                width: $laptop;
+  
+
+
+    .landingPg {
+
+        .container {
+            width: $laptop;
+        }
+
+        .ladingwrapper{
+            flex-direction:row;
+        }
+        #formbasic {
+            div{
+                flex-direction: row;
             }
         }
     }
+
+
+
 }
 
 

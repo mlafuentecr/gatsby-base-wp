@@ -1202,7 +1202,6 @@ h2.gradient-purple {
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  min-width: 20%;
   color: gray;
 }
 
@@ -1818,6 +1817,14 @@ main {
           box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.07);
 }
 
+.pgInternal #header .logo {
+  height: 100%;
+}
+
+.pgInternal .container {
+  margin: 0px auto !important;
+}
+
 .gallery .wrap {
   height: 100%;
   background-attachment: fixed;
@@ -1906,11 +1913,10 @@ main {
   height: 100%;
 }
 
-/*<!--=============== Post  ===============-->*/
+/*<!--=============== landingPg  ===============-->*/
 .landingPg .content {
-  max-width: 70%;
-  background: red;
   padding: 10px;
+  background: white;
 }
 
 .landingPg .ladingwrapper {
@@ -1922,10 +1928,13 @@ main {
           justify-content: space-evenly;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .landingPg #formbasic {
-  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1938,12 +1947,33 @@ main {
       -ms-flex-direction: row;
           flex-direction: row;
   max-width: 800px;
-  margin: auto;
-  background: white;
-  height: 100%;
-  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  background: #e8e8e8;
   padding: 20px;
+  -webkit-box-shadow: inset 0px 25px 23px -10px rgba(0, 0, 0, 0.38);
+  box-shadow: inset 0px 25px 23px -10px rgba(0, 0, 0, 0.38);
+}
+
+.landingPg #formbasic form {
+  padding: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.landingPg #formbasic form label {
+  margin-right: 20px;
+}
+
+.landingPg #formbasic form h3 {
+  text-align: center;
+}
+
+.landingPg #formbasic form fieldset {
+  width: 100%;
+}
+
+.landingPg #formbasic form fieldset div {
+  width: 100%;
 }
 
 .landingPg .react-reveal {
@@ -1957,9 +1987,16 @@ main {
   background-attachment: fixed;
   background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
   background-color: #161616;
+  background-color: #4683ff;
+  background-blend-mode: luminosity;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+}
+
+.landingPg .mainText {
+  padding: 0px;
+  margin: 0px;
 }
 
 .landingPg h2 {
@@ -2017,106 +2054,6 @@ main {
   height: auto;
 }
 
-/*<!--=============== Landing  ===============-->*/
-.landing main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.landing main #formbasic form fieldset {
-  width: 100%;
-}
-
-.landing main #formbasic form fieldset div {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.landing main .wrap {
-  background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
-  background-color: #4683ff;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  background-blend-mode: luminosity;
-}
-
-.landing main .blocks-gallery-item {
-  height: 250px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: inherit;
-}
-
-.landing main .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
-  background: white;
-  margin: 10px 0px;
-  border-radius: 15px;
-  padding: 20px;
-  min-height: 750px;
-  -webkit-transition: opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-box-shadow 0.25s ease 0s, -webkit-transform 0.25s ease 0s, -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  transition: opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-box-shadow 0.25s ease 0s, -webkit-transform 0.25s ease 0s, -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-box-shadow 0.25s ease 0s, -webkit-transform 0.25s ease 0s, -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-}
-
-.landing main .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 10px;
-}
-
-.landing main #formbasic {
-  border-radius: 15px;
-  background: #e8e7e7;
-  padding: 15px;
-  -webkit-box-shadow: inset 19px 0px 21px -7px rgba(0, 0, 0, 0.33);
-  box-shadow: inset 19px 0px 21px -7px rgba(0, 0, 0, 0.33);
-  -webkit-transition: opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-box-shadow 0.25s ease 0s, -webkit-transform 0.25s ease 0s, -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  transition: opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-box-shadow 0.25s ease 0s, -webkit-transform 0.25s ease 0s, -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-box-shadow 0.25s ease 0s, -webkit-transform 0.25s ease 0s, -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-}
-
-.landing main #formbasic div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.landing main #formbasic div input {
-  border-bottom: 1px solid #cf1918;
-}
-
-.landing main #formbasic form label {
-  margin-right: 20px;
-}
-
 /*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
 /*<!--=============== IOS DEVICES ===============-->*/
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
@@ -2128,6 +2065,30 @@ main {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+  /*<!--=============== landingPg  ===============-->*/
+  .landingPg .ladingwrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .landingPg #formbasic {
+    margin: 0px 10px;
+    -webkit-box-align: self-start;
+        -ms-flex-align: self-start;
+            align-items: self-start;
+    -webkit-box-shadow: inset 33px 0px 23px -10px rgba(0, 0, 0, 0.38);
+    box-shadow: inset 33px 0px 23px -10px rgba(0, 0, 0, 0.38);
+  }
+  .landingPg #formbasic div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .landingPg .container {
+    width: 100%;
   }
   /*<!--=============== Landing  ===============-->*/
   .landing main .blocks-gallery-item {
@@ -2162,6 +2123,9 @@ main {
     margin: 0px !important;
   }
   .landing main #formbasic {
+    background: #e8e8e8;
+    -webkit-box-shadow: inset 24px 0px 23px -10px rgba(0, 0, 0, 0.38);
+    box-shadow: inset 24px 0px 23px -10px rgba(0, 0, 0, 0.38);
     padding: 15px;
   }
   .landing main #formbasic h3 {
@@ -2204,8 +2168,20 @@ main {
   .container {
     width: 1140px;
   }
-  .landing main .mainText {
+  .landingPg .container {
     width: 1140px;
+  }
+  .landingPg .ladingwrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .landingPg #formbasic div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
