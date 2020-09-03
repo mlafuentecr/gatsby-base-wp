@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import LayoutIndex from "../components/layoutinternal"
 import { useStaticQuery, graphql } from "gatsby"
 import Bounce from 'react-reveal/Bounce';
@@ -36,9 +37,15 @@ const posts = queryCategoryPost.WP_1.posts.nodes;
     console.log(props);
     const propsArray =  props.posts;
     const result = Object.keys(propsArray).map((item, key) => { 
-      console.log(`xxxx`);
-      console.log( propsArray[item].slug );
-       return <li key={key}>{ propsArray[item].slug }</li>
+       return (
+         <div className="postWrapper">
+            <h2 key={key}>{ propsArray[item].title }</h2>
+            <div className="thumb"><img src={ propsArray[item].featuredImage.node.sourceUrl} alt=""/></div>
+           <div className="expert">{propsArray[item].excerpt}</div>
+           <Link to={`../${propsArray[item].slug}`}>{ propsArray[item].slug }</Link>
+         </div>
+       
+       )
     });
 
     return result
