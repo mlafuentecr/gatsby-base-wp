@@ -5,7 +5,7 @@ import Bounce from "react-reveal/Bounce"
 
 export default function Pages(props) {
   return (
-    <Layout nameType={'page'} >
+    <Layout nameType={`page ${props.pageContext.slug}`} >
       <SEO title={`${props.pageContext.title}`} />
 
       <div className="wrap">

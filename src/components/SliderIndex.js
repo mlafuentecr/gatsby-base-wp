@@ -1,6 +1,6 @@
 import React from "react"
 import AwesomeSlider from "react-awesome-slider"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import withAutoplay from "react-awesome-slider/dist/autoplay"
 import "react-awesome-slider/dist/styles.css"
 
@@ -61,8 +61,6 @@ const SliderIndex = props => {
   const bannerArray = headlinesArray.map((headline, index) => {
     
     const {
-      desktopImgSwitch,
-      mobileImgSwitch,
       textSwitch,
       videoImgSwitch,
     } = headline.controls
@@ -78,11 +76,7 @@ const SliderIndex = props => {
       imageVerticalPosition: imgV,
       imageHorizontalPosition: imgH,
     } = headline.desktop
-    const {
-      backgroundImg: bgMobile,
-      images: imgMobile,
-      text: textMobile,
-    } = headline.mobile
+  
     const videoUrl = headlinesArray.videoUrl
 
     function bgUrl() {

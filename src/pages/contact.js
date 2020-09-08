@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React  from "react"
 import LayoutIndex from "../components/layoutinternal"
 import ContactFormBasic from "../components/form"
 import Zoom from "react-reveal/Zoom"
