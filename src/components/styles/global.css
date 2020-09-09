@@ -992,6 +992,23 @@ h2.gradient-purple {
   transition: .3s ease-in-out;
 }
 
+.subtitle {
+  background: #002256;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 40px;
+  color: white;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #000000), color-stop(90%, #1e69de));
+  background: linear-gradient(to bottom, #000000 90%, #1e69de 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#1e69de',GradientType=0 );
+  padding: 10px;
+}
+
+.top-30 {
+  margin-top: 30px;
+}
+
 /*<!--=============== Gallery  ===============-->*/
 .wp-block-gallery .blocks-gallery-grid {
   display: -webkit-box;

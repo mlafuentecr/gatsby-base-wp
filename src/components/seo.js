@@ -22,7 +22,7 @@ const SEO = ({ description,  meta, title, author }) =>{
   `)
 
   
-  const {title: titleQuery, siteUrl: siteUrlQuery, description: descriptionQuery} =site.allSite.nodes[0].siteMetadata;
+  const {title: titleQuery,  description: descriptionQuery} =site.allSite.nodes[0].siteMetadata;
   const metaDescription = description || descriptionQuery
   const metaTitle =  title || titleQuery;
 

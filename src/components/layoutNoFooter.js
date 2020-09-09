@@ -2,8 +2,7 @@ import React,{useState} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import './styles/global.css'
-import SEO from '../components/seo'
-import Modal, {closeStyle} from 'simple-react-modal'
+import Modal  from 'simple-react-modal'
 
 import handleChick from './handleClick'
 

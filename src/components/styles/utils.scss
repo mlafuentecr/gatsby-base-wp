@@ -381,6 +381,42 @@ $curveWidth: 200%;
     transition: .3s ease-in-out;
 }
 
+.subtitle {
+    background: #002256;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 40px;
+    color: white;
+    background: rgb(2,0,36);
+    background: linear-gradient(to bottom, #000000 90%,#1e69de 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#1e69de',GradientType=0 );
+  
+    padding: 10px;
+}
+.top-10{
+    margin-top: 10px;
+   }
+   .top-20{
+    margin-top: 20px;
+   }
+   .top-30{
+    margin-top: 30px;
+   }
+   .top-40{
+    margin-top: 40px;
+   }
+   .top-50{
+    margin-top: 50px;
+   }
+   .top-60{
+    margin-top: 60px;
+   }
+   .top-70{
+    margin-top: 70px;
+   }
+   .top-80{
+    margin-top: 80px;
+   }
 
 /*<!--=============== Gallery  ===============-->*/
 .wp-block-gallery{
