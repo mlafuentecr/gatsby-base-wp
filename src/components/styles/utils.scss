@@ -383,23 +383,23 @@ $curveWidth: 200%;
 
 
 /*<!--=============== Gallery  ===============-->*/
+.wp-block-gallery{
+    .blocks-gallery-grid {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
 
-.blocks-gallery-grid {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    li{
+        margin: 10px!important;
+        min-height: 300px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
 
-li{
-    background: red;
-    margin: 10px!important;
-    min-height: 300px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
+    }
 }
 
 .blocks-gallery-item__caption {

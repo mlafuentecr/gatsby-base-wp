@@ -454,7 +454,7 @@ h2.gradient-purple {
 }
 
 /*<!--=============== Gallery  ===============-->*/
-.blocks-gallery-grid {
+.wp-block-gallery .blocks-gallery-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -472,8 +472,7 @@ h2.gradient-purple {
           justify-content: space-evenly;
 }
 
-.blocks-gallery-grid li {
-  background: red;
+.wp-block-gallery .blocks-gallery-grid li {
   margin: 10px !important;
   min-height: 300px;
   -webkit-box-pack: center;

@@ -5,8 +5,6 @@ import MenuItems from "./menu"
 
 const Header = props => {
 
- 
-
   return (
     <>
       <header id="header" className="header style-color clearfix">
