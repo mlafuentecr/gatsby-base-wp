@@ -1,9 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 const MenuItems = () => {
-  const [showSubmenu] = useState(true)
-
+ 
   const queryMenu = useStaticQuery(graphql`
   {
     WP_1 {
@@ -62,7 +61,7 @@ const MenuItems = () => {
                   { //Submenu
                     childItems.nodes.map((obj2, iii) => (
                       <li key={iii} className="subChildren">
-                      <a href={obj2.path}>{obj2.label}</a>
+                      <Link to={obj2.path}>{obj2.label}</Link>
                       </li>
                     ))
                   }

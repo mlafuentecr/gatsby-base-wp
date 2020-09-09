@@ -1,16 +1,16 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState  } from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import Header from './header'
 import Footer from './footer'
 import './styles/global.css'
-import Modal, {closeStyle} from 'simple-react-modal'
+import Modal  from 'simple-react-modal'
 
 import handleChick from './handleClick'
 
 const LayoutIndex = ( props ) => {
 const [showModal, setShowModal] = useState(false); 
 const [modalContent, setModalContent] = useState(''); 
-const [classPg, setClassPg] = useState(''); 
+
 
 
 const querySettings = useStaticQuery(graphql`
@@ -61,9 +61,6 @@ const siteSetting = querySettings.WP_1.hDsettings.nodes[1].acf_settings //settin
 const {
   siteLogo,
   social,
-  mainColors,
-  secondColor,
-  phone2,
   logoText,
   contactInfo,
 } = siteSetting

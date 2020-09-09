@@ -57,11 +57,7 @@ const LayoutIndex = ({ children }) => {
   const siteSetting = querySettings.WP_1.hDsettings.nodes[1].acf_settings //settings
   const {
     siteLogo,
-    seo,
     social,
-    mainColors,
-    secondColor,
-    phone2,
     logoText,
     contactInfo,
   } = siteSetting

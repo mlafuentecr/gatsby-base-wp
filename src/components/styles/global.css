@@ -1811,6 +1811,29 @@ main {
 }
 
 /*<!--=============== Internal  ===============-->*/
+.ejemplo-de-websites main, .ejemplo-de-logos main, .ejemplo-de-logos-2 main {
+  background: #F2F3F5;
+}
+
+.ejemplo-de-websites main h2, .ejemplo-de-logos main h2, .ejemplo-de-logos-2 main h2 {
+  color: #E70F0F;
+  text-transform: uppercase;
+}
+
+.ejemplo-de-websites main .wp-block-gallery, .ejemplo-de-logos main .wp-block-gallery, .ejemplo-de-logos-2 main .wp-block-gallery {
+  margin-bottom: 80px;
+}
+
+.ejemplo-de-websites main .container, .ejemplo-de-logos main .container, .ejemplo-de-logos-2 main .container {
+  margin: 40px auto !important;
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px;
+  position: relative;
+}
+
 .pgInternal #header {
   -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.07);
           box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.07);
@@ -1985,7 +2008,6 @@ main {
   height: 100%;
   background-attachment: fixed;
   background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
-  background-color: #161616;
   background-color: #4683ff;
   background-blend-mode: luminosity;
   background-repeat: no-repeat;
