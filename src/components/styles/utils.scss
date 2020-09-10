@@ -382,16 +382,17 @@ $curveWidth: 200%;
 }
 
 .subtitle {
-    background: #002256;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 40px;
-    color: white;
-    background: rgb(2,0,36);
-    background: linear-gradient(to bottom, #000000 90%,#1e69de 90%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#1e69de',GradientType=0 );
+    color: #767676;
+    border-bottom: 2px solid #767676;
   
     padding: 10px;
+}
+
+.gray {
+    color: gray;
 }
 .top-10{
     margin-top: 10px;
@@ -433,6 +434,7 @@ $curveWidth: 200%;
         justify-content: center;
         align-items: center;
         display: flex;
+        background: #e8e8e8;
     }
 
     }
@@ -572,13 +574,32 @@ $curveWidth: 200%;
     flex-direction: row;
     max-width: 800px;
     width: 100%;
-    margin: auto;
+    background: white;
+    margin: 30px auto;
+    padding: 30px;
+    form {
+        width: 100%;
+         h3 {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 40px;
+            color: #767676;
+            border-bottom: 1px solid #767676;
+            padding: 10px;
+        }
+    }
+
     div {
         display: flex;
         flex-direction: column;
-        margin: 10% auto;
+        margin: 15px auto;
         justify-content: center;
         align-items: center;
+    }
+    fieldset{
+        div{
+            margin: auto;
+        }
     }
     .box {
         max-width: 50%;
@@ -599,6 +620,7 @@ $curveWidth: 200%;
             border: none;
         }
         label {
+            width: 150px;
             line-height: 1.5;
             font-family: "Roboto", sans-serif;
             font-weight: normal;

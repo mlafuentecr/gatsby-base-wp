@@ -7,9 +7,9 @@ import Bounce from "react-reveal/Bounce"
 export default function Pages(props) {
 
   return (
-    <Layout nameType={'landingPg xx'} >
+    <Layout nameType={'landingPg '} >
           <SEO title={`${props.pageContext.title}`} description={`${props.pageContext.excerpt}`}  />
-      <div className="wrap">
+      <div className="wrap" style={{backgroundImage: `url(../bg-landing.jpg)`, backgroundPosition:`center top`}}>
         <div className="container mainText ">
         
         <Bounce bottom>
@@ -19,6 +19,7 @@ export default function Pages(props) {
             pgname={props.pageContext.slug}
             dangerouslySetInnerHTML={{ __html: props.pageContext.content }}
           />
+         
             <ContactFormBasic />
             </div>
           </Bounce>

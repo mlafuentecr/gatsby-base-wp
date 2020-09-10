@@ -454,16 +454,16 @@ h2.gradient-purple {
 }
 
 .subtitle {
-  background: #002256;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 40px;
-  color: white;
-  background: #020024;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #000000), color-stop(90%, #1e69de));
-  background: linear-gradient(to bottom, #000000 90%, #1e69de 90%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#1e69de',GradientType=0 );
+  color: #767676;
+  border-bottom: 2px solid #767676;
   padding: 10px;
+}
+
+.gray {
+  color: gray;
 }
 
 .top-10 {
@@ -529,6 +529,7 @@ h2.gradient-purple {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #e8e8e8;
 }
 
 .blocks-gallery-item__caption {
@@ -661,7 +662,22 @@ h2.gradient-purple {
           flex-direction: row;
   max-width: 800px;
   width: 100%;
-  margin: auto;
+  background: white;
+  margin: 30px auto;
+  padding: 30px;
+}
+
+#formbasic form {
+  width: 100%;
+}
+
+#formbasic form h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 40px;
+  color: #767676;
+  border-bottom: 1px solid #767676;
+  padding: 10px;
 }
 
 #formbasic div {
@@ -672,13 +688,17 @@ h2.gradient-purple {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10% auto;
+  margin: 15px auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#formbasic fieldset div {
+  margin: auto;
 }
 
 #formbasic .box {
@@ -704,6 +724,7 @@ h2.gradient-purple {
 }
 
 #formbasic form label {
+  width: 150px;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   font-weight: normal;

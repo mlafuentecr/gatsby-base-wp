@@ -185,14 +185,18 @@ main {
     .wrap {
         height: 100%;
         background-attachment: fixed;
-        background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
-        background-color: #161616;
+       // background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
+        background-color: #4683ff96;
         background-repeat: no-repeat;
         background-position: top center;
         background-size: cover;
     }
 }
-
+.undefined{
+    main{
+        background-color: #f9f9f9;
+    }
+}
 
 /*<!--=============== Post  ===============-->*/
 
@@ -206,7 +210,7 @@ main {
         height: 100%;
         background-attachment: fixed;
         background-image: url(https://www.gatsby.mariolafuente.com/wp-content/uploads/2020/09/background-landingpage.jpg);
-        background-color: #161616;
+        background-color: #4683ff96;
         background-repeat: no-repeat;
         background-position: top center;
         background-size: cover;
@@ -386,7 +390,9 @@ box-shadow: inset 0px 25px 23px -10px rgba(0,0,0,0.38);
         flex: 1;
     }
 
-
+    #carousel{
+        max-height: 450px;
+    }
 
     /*<!--=============== landingPg  ===============-->*/
 
