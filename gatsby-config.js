@@ -52,7 +52,7 @@ module.exports = {
         theme_color: `#f1162b`,
         display: `fullscreen`,
         // gcm_sender_id: 'fbe5a671-adba-4b70-b95e-34c8d10c33cf',
-        icon: `./static/favicon.ico`, // This path is relative to the root of the site.
+        icon: `./static/apple-icon.png`, // This path is relative to the root of the site.
         crossOrigin: `anonymous`,// `use-credentials` or `anonymous`
       },
     },
