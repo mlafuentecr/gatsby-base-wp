@@ -6,9 +6,13 @@ module.exports = {
     siteUrl: "https://www.mariolafuente.com/",
   },
   plugins: [
+    `gatsby-plugin-offline`,
    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        precachePages: [`/ejemplo-de-websites/`, `/ejemplo-de-material-impreso/*`],
+      },
       options: {
         fonts: [
           `limelight`,
