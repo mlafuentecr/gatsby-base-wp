@@ -23,7 +23,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
     ```
 
-1.  **Start developing.**
+1.  **Start developing. **
 
     Navigate into your new site’s directory and start it up.
 
