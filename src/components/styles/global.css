@@ -504,6 +504,9 @@ select {
     display: -ms-flexbox;
     display: flex;
   }
+  .openDraw #mainnav-mobi {
+    display: none;
+  }
   .btn-menu {
     display: none;
   }
@@ -550,6 +553,25 @@ select {
 }
 
 /*<!--=============== GENERAL STYLES  ===============-->*/
+a.btn {
+  background-color: #cf1918;
+  border: none;
+  color: #FFFFFF;
+  /* padding: 15px 32px; */
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  margin: 16px 0 !important;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+a.btn:hover {
+  background-color: #fdeae9;
+  color: black;
+}
+
 h1 {
   font-size: 48px;
   margin-bottom: 27px;
@@ -564,7 +586,7 @@ h2 {
 }
 
 h2.gradient-red {
-  color: #bc202e;
+  color: #cf1918;
   display: inline-block;
   text-transform: uppercase;
   position: relative;
@@ -1049,11 +1071,6 @@ h2.gradient-purple {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 .wp-block-gallery .blocks-gallery-grid li {
@@ -1068,7 +1085,7 @@ h2.gradient-purple {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #e8e8e8;
+  background: #e8e8e840;
 }
 
 .blocks-gallery-item__caption {
@@ -2155,7 +2172,7 @@ main {
             flex: 1;
   }
   #carousel {
-    max-height: 450px;
+    height: 400px;
   }
   /*<!--=============== landingPg  ===============-->*/
   .landingPg .ladingwrapper {

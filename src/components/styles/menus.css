@@ -420,6 +420,9 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .openDraw #mainnav-mobi {
+    display: none;
+  }
   .btn-menu {
     display: none;
   }

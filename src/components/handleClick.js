@@ -3,8 +3,8 @@ let countSlider = 0;
 let countSliderBack = 4;
 function handleChick(e) {
 
-   console.log(`manejando click ${e.target.className}`)
-  // console.log(`manejando click ${JSON.stringify(e.target.dataset.modal)}`)
+   console.log(`manejando click a ${e.target.parentElement.className}`)
+   console.log(`manejando click b ${JSON.stringify(e.target.dataset.modal)}`)
 
   const firstDiv = document.getElementById('___gatsby');
     //OPEN DRAW *********************************
@@ -13,8 +13,8 @@ function handleChick(e) {
     }
 
     //OPEN DRAW *********************************
-    if (e.target.classList.contains('btn-menu')) {
-      console.log(`gotop`)
+    if (e.target.parentElement.classList.contains('subChildren')) {
+      firstDiv.classList.toggle('openDraw')
     }
 
     // //OPEN IMAGE *********************************
