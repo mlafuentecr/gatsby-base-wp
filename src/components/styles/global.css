@@ -919,7 +919,6 @@ h2.gradient-purple {
 }
 
 .box img {
-  width: 100%;
   height: auto;
 }
 
@@ -1813,10 +1812,6 @@ body {
           flex-direction: column;
 }
 
-.footer .social-wrap {
-  width: 40%;
-}
-
 .footer .social-wrap ul {
   list-style-type: none;
   margin-top: 0px;
@@ -2262,9 +2257,6 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-  .footer .social-wrap {
-    width: 40%;
   }
   .footer .social-wrap ul {
     margin-top: 0px;

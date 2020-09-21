@@ -63,6 +63,7 @@ const SliderIndex = props => {
     const {
       textSwitch,
       videoImgSwitch,
+      mobileImgSwitch
     } = headline.controls
     const {
       backgroundImg,
@@ -94,21 +95,21 @@ const SliderIndex = props => {
       return ""
     }
     const headlineContent = () => {
-
+      console.log(`mobileImgSwitch ${mobileImgSwitch}`);
       if (images && !textSwitch) {
-        return <div style={{ justifyContent: imgH, alignItems:imgV}} >
-          <img src={`${images.sourceUrl}`} alt={`${images.altText}`} />
+        return <div className={`XXXXX1 ${mobileImgSwitch}`} style={{ justifyContent: imgH, alignItems:imgV}} >
+          <img loading="lazy" src={`${images.sourceUrl}`} alt={`${images.altText}`} />
           </div>
       }
 
       if (images && textSwitch) {
-        return <div className='bannerHolder' style={{ justifyContent: imgH, alignItems:imgV}} >
-          <img src={`${images.sourceUrl}`} alt={`${images.altText}`} />
+        return <div className={`bannerHolder XXX2 ${mobileImgSwitch}`} style={{ justifyContent: imgH, alignItems:imgV}} >
+          <img loading="lazy" src={`${images.sourceUrl}`} alt={`${images.altText}`} />
           <div className="bannertext" dangerouslySetInnerHTML={{ __html: `${text}` }}></div>
         </div>
       }
       if (textSwitch) {
-        return <div className='bannerHolder' style={{ justifyContent: imgH, alignItems:imgV}} >
+        return <div className={`bannerHolder XXX3  ${mobileImgSwitch}`} style={{ justifyContent: imgH, alignItems:imgV}} >
           <div className="bannertext" dangerouslySetInnerHTML={{ __html: `${text}` }}></div>
         </div>
       }
