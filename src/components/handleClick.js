@@ -3,6 +3,7 @@ let countSlider = 0;
 let countSliderBack = 4;
 function handleChick(e) {
 
+   console.log(`manejando click 1 ${e.target.className}`)
    console.log(`manejando click a ${e.target.parentElement.className}`)
    console.log(`manejando click b ${JSON.stringify(e.target.dataset.modal)}`)
 
@@ -16,6 +17,16 @@ function handleChick(e) {
     if (e.target.parentElement.classList.contains('subChildren')) {
       firstDiv.classList.toggle('openDraw')
     }
+
+
+       //OPEN DRAW *********************************
+       if (e.target.classList.contains('eng')) {
+         // Store
+        localStorage.setItem("lng", "eng");
+        window.location.href= `/eng`;
+      }
+
+      
 
     // //OPEN IMAGE *********************************
     // if(e.target.dataset.fullUrl){
@@ -63,8 +74,6 @@ function handleChick(e) {
 
           // //prevSlider
           if (e.target.classList.contains('carousel__button--prev')) {
-            console.log('xxxx');
-            console.log(countSliderBack +' '+ items.length);
             if(countSliderBack > 1){
               countSliderBack--
               console.log(countSliderBack);
