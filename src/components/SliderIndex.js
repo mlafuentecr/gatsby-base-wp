@@ -65,6 +65,7 @@ const SliderIndex = props => {
       videoImgSwitch,
       mobileImgSwitch
     } = headline.controls
+
     const {
       backgroundImg,
       images,
@@ -78,6 +79,13 @@ const SliderIndex = props => {
       imageHorizontalPosition: imgH,
     } = headline.desktop
   
+    const {
+      text: movTextSwitch,
+      backgroundImg: movbg,
+      images: movImages
+    } = headline.mobile
+
+
     const videoUrl = headlinesArray.videoUrl
 
     function bgUrl() {
@@ -95,10 +103,21 @@ const SliderIndex = props => {
       return ""
     }
     const headlineContent = () => {
-      console.log(`mobileImgSwitch ${mobileImgSwitch}`);
-      if (images && !textSwitch) {
-        return <div className={`XXXXX1 ${mobileImgSwitch}`} style={{ justifyContent: imgH, alignItems:imgV}} >
+      //console.log(`buscando img mobile ${JSON.stringify(movbg)}`)
+      // if(movbg){
+      //   console.log(`xxxxxxx ${JSON.stringify(movbg)}`);
+      //   console.log(`movImages ${movbg}`);
+      // }
+     
+
+      if (images && !textSwitch && !mobileImgSwitch) {
+        return <div className={`desktopHeadline`} style={{ justifyContent: imgH, alignItems:imgV}} >
           <img loading="lazy" src={`${images.sourceUrl}`} alt={`${images.altText}`} />
+          </div>
+      }
+      if (movbg && !textSwitch && mobileImgSwitch) {
+        return <div className={`movileHeadline`} style={{ justifyContent: imgH, alignItems:imgV}} >
+          <img loading="lazy" src={`${movbg.sourceUrl}`} alt={`${movbg.altText}`} />
           </div>
       }
 
@@ -125,12 +144,13 @@ const SliderIndex = props => {
    }
 
     return (
-      <div key={index} onClick={()=>clickHeadline()} style={{backgroundPositionY:vPosition, backgroundPositionX: hPosition, backgroundSize:bgSize, backgroundColor:bgcolor, backgroundImage: `url(${bgUrl()})` }}>
+      <div key={index} onClick={()=>clickHeadline()} style={{backgroundPositionY:vPosition, backgroundPositionX: hPosition, backgroundSize:bgSize, backgroundColor:bgcolor}} >
         {headlineContent()}
       </div>
     )
   })
 
+  //className={`headlineMobile-${mobileImgSwitch}`}  style={{backgroundPositionY:vPosition, backgroundPositionX: hPosition, backgroundSize:bgSize, backgroundColor:bgcolor, backgroundImage: `url(${bgUrl()})` }  }
  
 
   const AutoplaySlider = withAutoplay(AwesomeSlider)

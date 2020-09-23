@@ -3,9 +3,9 @@ let countSlider = 0;
 let countSliderBack = 4;
 function handleChick(e) {
 
-   console.log(`manejando click 1 ${e.target.className}`)
-   console.log(`manejando click a ${e.target.parentElement.className}`)
-   console.log(`manejando click b ${JSON.stringify(e.target.dataset.modal)}`)
+  //  console.log(`manejando click 1 ${e.target.className}`)
+  //  console.log(`manejando click a ${e.target.parentElement.className}`)
+  //  console.log(`manejando click b ${JSON.stringify(e.target.dataset.modal)}`)
 
   const firstDiv = document.getElementById('___gatsby');
     //OPEN DRAW *********************************
@@ -19,13 +19,19 @@ function handleChick(e) {
     }
 
 
-       //OPEN DRAW *********************************
+       //Change Language *********************************
        if (e.target.classList.contains('eng')) {
          // Store
+         console.log(`Saving Language`)
         localStorage.setItem("lng", "eng");
         window.location.href= `/eng`;
       }
-
+      if (e.target.classList.contains('spa')) {
+        // Store
+        console.log(`Saving Language spa`)
+       localStorage.setItem("lng", "spa");
+       window.location.href= `/`;
+     }
       
 
     // //OPEN IMAGE *********************************

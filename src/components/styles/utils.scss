@@ -107,6 +107,7 @@ h2.gradient-purple {
         line-height: 45px;
         letter-spacing: 0.5px;
         font-weight: bold;
+        font-size: 50px;
     }
     h3 {
         font-size: 30px;
@@ -610,7 +611,7 @@ $curveWidth: 200%;
         flex-direction: column;
         margin: 15px auto;
         justify-content: center;
-        align-items: center;
+        align-items: left;
     }
     fieldset{
         div{
@@ -835,6 +836,23 @@ button {
     }
 
 
+
+
+    .headlineMobile-null {
+        display: none!important;
+    }
+
+
+
+
+    .desktop {
+        display: none;
+    }
+
+
+
+
+
 /*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
 
 
@@ -852,6 +870,10 @@ button {
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
 
 @media only screen and (min-width: $ipad) {
+    .headlineMobile-null {
+        display: flex!important;
+    }
+
     #formbasic {
         div {
             flex-direction: row;

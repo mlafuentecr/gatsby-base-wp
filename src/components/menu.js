@@ -11,6 +11,7 @@ const MenuItems = () => {
           slug
           menuItems(first: 50) {
             nodes {
+              id
               label
               cssClasses
               path
@@ -35,14 +36,9 @@ const MenuItems = () => {
 
 
   useEffect(() => {
-    console.log(`aa`)
-    console.log(lngState)
     const lenguage = localStorage.getItem("lng")
     if(lenguage){
       setLngState(lenguage)
-      console.log(`vvv`)
-      console.log(lngState)
-
     }
     
   }, []); // Only re-run the effect if count changes
@@ -55,16 +51,53 @@ const MenuItems = () => {
   const MenuMain = () => {
     return allMenus.map((menu, i) => {
 
+
+      //Menu english
+      if (lngState === 'eng' && (menu.slug === `top-menu-eng`) ) {
+   
+              return (
+                <ul key={i} className="menu">
+                  {menu.menuItems.nodes.map((link, ii) => {
+                    //destructuring variables
+                    let { id, label, path, childItems, parentId} = link
+        
+                if(parentId === null){
+                  //si no tiene parentId es menu base
+                  return (
+                    <li key={id} className={`subLink`}>
+                    <a href={path}>{label} </a>
+              
+                        <ul className="submenu">
+                        { //Submenu
+                          childItems.nodes.map((obj2, iii) => (
+                            <li key={iii} className={`subChildren `}>
+                            <Link  className={`${obj2.cssClasses}`} to={obj2.path}>{obj2.label}</Link>
+                            </li>
+                          ))
+                        }
+                        </ul>
+        
+                    </li>
+                  )
+                }
+          
+        
+                  })}
+                </ul>
+              )
+
+      }    
       
-      //lngState is == to top-menu if not 
-      if (menu.slug === lngState) {
-     
+      
+      
+      if (lngState !== 'eng' && (menu.slug === `top-menu`) ) {
+   
         return (
           <ul key={i} className="menu">
             {menu.menuItems.nodes.map((link, ii) => {
               //destructuring variables
               let { id, label, path, childItems, parentId} = link
-
+  
           if(parentId === null){
             //si no tiene parentId es menu base
             return (
@@ -80,17 +113,23 @@ const MenuItems = () => {
                     ))
                   }
                   </ul>
-
+  
               </li>
             )
           }
-     
- 
+    
+  
             })}
           </ul>
         )
-      }
+
+}
+
+
+
+
     })
+
   }
 
 

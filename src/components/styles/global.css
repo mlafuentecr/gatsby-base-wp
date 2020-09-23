@@ -660,6 +660,7 @@ h2.gradient-purple {
   line-height: 45px;
   letter-spacing: 0.5px;
   font-weight: bold;
+  font-size: 50px;
 }
 
 .pgindex h3 {
@@ -1248,9 +1249,9 @@ h2.gradient-purple {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
 #formbasic fieldset div {
@@ -1514,10 +1515,23 @@ ul.blocks-gallery-grid {
           transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.headlineMobile-null {
+  display: none !important;
+}
+
+.desktop {
+  display: none;
+}
+
 /*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
 /*<!--=============== IOS DEVICES ===============-->*/
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
 @media only screen and (min-width: 768px) {
+  .headlineMobile-null {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
   #formbasic div {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2155,10 +2169,19 @@ main {
   height: auto;
 }
 
+.desktop {
+  display: none !important;
+}
+
 /*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
 /*<!--=============== IOS DEVICES ===============-->*/
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
 @media only screen and (min-width: 768px) {
+  .desktop {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
   .container {
     width: 768px;
   }
@@ -2193,6 +2216,11 @@ main {
   }
   .landingPg .container {
     width: 100%;
+  }
+  .wp-block-gallery .blocks-gallery-grid {
+    -ms-flex-wrap: WRAP;
+        flex-wrap: WRAP;
+    background-color: #f2f3f578;
   }
   /*<!--=============== Landing  ===============-->*/
   .landing main .blocks-gallery-item {

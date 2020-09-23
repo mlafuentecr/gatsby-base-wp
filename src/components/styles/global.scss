@@ -197,6 +197,8 @@ main {
     }
 }
 
+
+
 /*<!--=============== Post  ===============-->*/
 
 .post {
@@ -303,6 +305,7 @@ box-shadow: inset 0px 25px 23px -10px rgba(0,0,0,0.38);
                 width: 100%;
             div{
                 width: 100%;
+            
             }
         }
         }
@@ -362,7 +365,11 @@ box-shadow: inset 0px 25px 23px -10px rgba(0,0,0,0.38);
 }
 
 
+.desktop {
+    display: none!important;
+  }
 
+  
 /*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
 
 
@@ -380,6 +387,10 @@ box-shadow: inset 0px 25px 23px -10px rgba(0,0,0,0.38);
 /* --------- Desktop  si es amyor que ipad 780px  ------ */
 
 @media only screen and (min-width: $ipad) {
+    .desktop {
+        display: flex!important;
+      }
+    
     .container {
         width: $ipad;
     }
@@ -415,6 +426,11 @@ box-shadow: inset 0px 25px 23px -10px rgba(0,0,0,0.38);
     }
  
 }
+
+.wp-block-gallery .blocks-gallery-grid {
+    flex-wrap: WRAP;
+    background-color: #f2f3f578;
+}
     /*<!--=============== Landing  ===============-->*/
     .landing {
         main {
@@ -422,6 +438,7 @@ box-shadow: inset 0px 25px 23px -10px rgba(0,0,0,0.38);
                 height: 400px;
                 figure {
                     height: 100%;
+
                 }
                 img {
                     display: block;
@@ -506,6 +523,7 @@ box-shadow: inset 0px 25px 23px -10px rgba(0,0,0,0.38);
         #formbasic {
             div{
                 flex-direction: row;
+                
             }
         }
     }
